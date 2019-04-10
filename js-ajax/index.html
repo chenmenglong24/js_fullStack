@@ -20,8 +20,10 @@
     // console.log(xhr.responseText)
     // console.log(xhr.readyState, xhr.status)
     xhr.onreadystatechange = function(){
+        console.log(xhr.readyState, xhr.status)
         if(xhr.readyState == 4 && xhr.status == 200){
             console.log(xhr.responseText)
+            console.log(123123);
         }
     }
     </script>
