@@ -1,0 +1,6 @@
+<view>
+    <!-- legends -->
+    <block wx:for="{{legends}}" wx:for-item="legends">
+        <text>{{legends.name}} {{legends.title}}</text>
+    </block>
+</view>
