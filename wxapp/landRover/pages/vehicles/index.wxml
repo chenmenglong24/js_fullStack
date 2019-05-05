@@ -1,0 +1,6 @@
+<!--pages/vehicles/index.wxml-->
+<view class="section">
+  <view class="cover">
+    <image/>
+  </view>
+</view>
