@@ -1,0 +1,2 @@
+<!--pages/components/countdown/countdown.wxml-->
+<view>{{timerText}}{{start?'s后重置':''}}</view>

@@ -16,12 +16,12 @@ App({
     wx.getSetting({
       success(settingRes) {
         // 已经授权
-        if (settingRes.authSetting['scope.userinfo']) {
+        if (settingRes.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: (infoRes) => {
               self.globalData.userInfo = infoRes.userInfo
               if (self.catchUserInfo) {
-                self.catchUserInfol(infoRes.userInfo)
+                self.catchUserInfo(infoRes.userInfo)
               }
                 // 如果是旧用户的话就更新信息
                 wx.cloud.callFunction({
