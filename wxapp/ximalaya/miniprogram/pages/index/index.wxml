@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="search">
+  <input type="string" placeholder="搜索你想听的节目"/>
+</view>
+  

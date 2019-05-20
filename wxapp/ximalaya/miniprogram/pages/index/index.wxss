@@ -1,0 +1,7 @@
+/**index.wxss**/
+.search{
+  background-color: #dddddd;
+  font-size: 35rpx;
+  margin: 20rpx 10rpx;
+  box-sizing: border-box;
+}
