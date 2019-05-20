@@ -1,5 +1,24 @@
 <!--index.wxml-->
 <view class="search">
+  <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
   <input type="string" placeholder="搜索你想听的节目"/>
 </view>
+<view class="swiperBox">
+  <swiper indicator-dots="true" 
+    indicator-color="rgba(0, 0, 0, 0.3)" 
+    indicator-active-color="#dddddd"
+    autoplay="true" 
+    current="0"
+    interval="3000" 
+    duration="500" 
+    circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item class="swiperImg">
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+    
+</view>
+  
   
