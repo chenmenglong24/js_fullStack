@@ -1,8 +1,8 @@
 /**index.wxss**/
 .searchicon{
-  margin: 15rpx 15rpx;
-  width: 50rpx;
-  height: 50rpx;
+  padding: 15rpx 15rpx;
+  width: 40rpx;
+  height: 40rpx;
   float: left;
 }
 .search{
@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 .search input{
-  height: 80rpx;
+  height: 70rpx;
   vertical-align: middle;
   display: inline-block;
 }
@@ -23,11 +23,79 @@
   border-radius: 25rpx;
   box-sizing: border-box;
 }
-.swiperImg{
-  border-radius: 25rpx;
-}
-/* .slide-image{
+.slide-image{
   width: 100%;
   height: 100%;
   border-radius: 25rpx;
-} */
+}
+.options{
+  height: 150rpx;
+  background-color: #dddddd;
+  margin: 30rpx 20rpx;
+  box-sizing: border-box;
+}
+.five{
+  display: inline-block;
+  height: 90rpx;
+  width: 20%;
+  text-align: center;
+  border-radius: 50%;
+}
+.option{
+  /* background-color: #dddddd; */
+  padding: 20rpx 40rpx 0rpx 40rpx;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  /* border-radius: 50%; */
+}
+.optionword{
+  font-size: 23rpx;
+}
+.recommend{
+  background-color: #dddddd;
+  margin: 20rpx 20rpx;
+  height: 350rpx;
+}
+.recommendItem{
+  position: relative;
+  background-color: #eeeeee;
+  height: 85%;
+}
+.viewAll{
+  color: #999999;
+  float: right;
+  font-size: 30rpx;
+  line-height: 2;
+}
+.recommend-item{
+  display: inline-block;
+  /* margin: 10rpx 15rpx; */
+  margin-top: 10rpx;
+  background-color: #dddddd;
+  width: 30%;
+  height: 80%;
+  /* border-radius: 20rpx; */
+  text-align: center;
+  box-sizing: border-box;
+}
+.recommend-item image{
+  height: 100%;
+  width: 100%;
+  border-radius: 25rpx;
+}
+.recommend-item text{
+  font-size: 32rpx;
+}
+.item1{
+  position: absolute;
+  left: 0%;
+}
+.item2{
+  position: absolute;
+  left: 35%;
+}
+.item3{
+  position: absolute;
+  left: 70%;
+}

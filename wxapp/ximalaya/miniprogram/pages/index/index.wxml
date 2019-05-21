@@ -3,6 +3,7 @@
   <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
   <input type="string" placeholder="搜索你想听的节目"/>
 </view>
+
 <view class="swiperBox">
   <swiper indicator-dots="true" 
     indicator-color="rgba(0, 0, 0, 0.3)" 
@@ -14,11 +15,57 @@
     circular="true">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item class="swiperImg">
-        <image src="{{item}}" class="slide-image" width="355" height="150" />
+        <image src="{{item}}" class="slide-image" />
       </swiper-item>
     </block>
   </swiper>
-    
 </view>
+
+<view class="options">
+  <ul>
+    <li class="five">
+      <image class="option" src="../../images/51.png"/>
+      <text class="optionword">榜单</text>
+    </li>
+    <li class="five">
+      <image class="option" src="../../images/52.png"/>
+      <text class="optionword">听小说</text>
+    </li>
+    <li class="five">
+      <image class="option" src="../../images/53.png"/>
+      <text class="optionword">情感电台</text>
+    </li>
+    <li class="five">
+      <image class="option" src="../../images/54.png"/>
+      <text class="optionword">听相声</text>
+    </li>
+    <li class="five">
+      <image class="option" src="../../images/55.png"/>
+      <text class="optionword">儿童故事</text>
+    </li>
+  </ul>
+</view>
+
+<view class="recommend">
+  <text class="guessLike">猜你喜欢</text>
+  <text class="viewAll">查看全部 ></text>
+  <!-- <image class="arrow" src="../../images/arrow.png"/> -->
+  <view class="recommendItem">
+    <view class="recommend-item item1">
+      <image src="../../images/item1.jpg" />
+      <text>诗中河流</text>
+    </view>
+    <view class="recommend-item item2">
+      <image src="../../images/item2.jpg" />
+      <text>Think</text>
+    </view>
+    <view class="recommend-item item3">
+      <image src="../../images/item3.jpg" />
+      <text>好莱坞秘密花园</text>
+    </view>
+  </view>
+</view>
+  
+  
   
   

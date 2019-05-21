@@ -3,11 +3,11 @@ const app = getApp()
 
 Page({
   data: {
-    imgUrls: [
-      '../../images/undeath.jpg',
-      '../../images/batman.jpg',
-      '../../images/kobe.jpg'
-    ]
+    avatarUrl: './user-unlogin.png',
+    userInfo: {},
+    logged: false,
+    takeSession: false,
+    requestResult: ''
   },
 
   onLoad: function() {
