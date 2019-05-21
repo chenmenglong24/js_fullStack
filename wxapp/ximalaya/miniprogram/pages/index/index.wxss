@@ -99,3 +99,40 @@
   position: absolute;
   left: 70%;
 }
+.sort{
+  background-color: #dddddd;
+  margin: 40rpx 20rpx;
+  height: 800rpx;
+}
+.books{
+  margin-top: 10rpx;
+  background-color: #eeeeee;
+  height: 90%;
+}
+.book{
+  margin: 10rpx 0rpx;
+  padding: 10rpx 0rpx;
+  background-color: #dddddd;
+  height: 32%;
+  box-sizing: border-box;
+}
+.bookImg{
+  float: left;
+  height: 100%;
+  width: 30%;
+}
+.bookInfo{
+  padding-left: 15rpx;
+  overflow: hidden;
+}
+.bookTitle{
+  display: block;
+}
+.bookDetail{
+  margin: 15rpx 0rpx;
+  display: block;
+  font-size: 25rpx;
+  color: #999999;
+  text-overflow: ellipsis;
+  /* white-space:nowrap; */
+}

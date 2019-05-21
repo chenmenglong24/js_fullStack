@@ -65,6 +65,22 @@
     </view>
   </view>
 </view>
+
+<view class="sort">
+  <text class="guessLike">有声小说</text>
+  <text class="viewAll">查看全部 ></text>
+  <view class="books">
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+    <view class="book"></view>
+    <view class="book"></view>
+  </view>
+</view>
   
   
   
