@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/sort/sort",
+    "pages/index/index",
     "pages/store/store",
     "pages/my/my"
   ],
