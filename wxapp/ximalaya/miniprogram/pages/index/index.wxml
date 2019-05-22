@@ -74,14 +74,81 @@
       <image class="bookImg" src="../../images/item2.jpg"/>
       <view class="bookInfo">
         <text class="bookTitle">书籍标题</text>
-        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
       </view>
     </view>
-    <view class="book"></view>
-    <view class="book"></view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
   </view>
 </view>
-  
+
+<view class="sort">
+  <text class="guessLike">相声评书</text>
+  <text class="viewAll">查看全部 ></text>
+  <view class="books">
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="sort">
+  <text class="guessLike">人文历史</text>
+  <text class="viewAll">查看全部 ></text>
+  <view class="books">
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+    </view>
+  </view>
+</view>
   
   
   

@@ -17,8 +17,9 @@
   vertical-align: middle;
   display: inline-block;
 }
+
 .swiperBox{
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
   margin: 20rpx 20rpx;
   border-radius: 25rpx;
   box-sizing: border-box;
@@ -30,7 +31,7 @@
 }
 .options{
   height: 150rpx;
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
   margin: 30rpx 20rpx;
   box-sizing: border-box;
 }
@@ -53,13 +54,13 @@
   font-size: 23rpx;
 }
 .recommend{
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
   margin: 20rpx 20rpx;
   height: 350rpx;
 }
 .recommendItem{
   position: relative;
-  background-color: #eeeeee;
+  /* background-color: #eeeeee; */
   height: 85%;
 }
 .viewAll{
@@ -72,7 +73,7 @@
   display: inline-block;
   /* margin: 10rpx 15rpx; */
   margin-top: 10rpx;
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
   width: 30%;
   height: 80%;
   /* border-radius: 20rpx; */
@@ -100,19 +101,20 @@
   left: 70%;
 }
 .sort{
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
   margin: 40rpx 20rpx;
   height: 800rpx;
 }
 .books{
   margin-top: 10rpx;
-  background-color: #eeeeee;
+  /* background-color: #eeeeee; */
   height: 90%;
 }
 .book{
   margin: 10rpx 0rpx;
   padding: 10rpx 0rpx;
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
+  border-bottom: 3rpx solid #cccccc;
   height: 32%;
   box-sizing: border-box;
 }
@@ -120,19 +122,27 @@
   float: left;
   height: 100%;
   width: 30%;
+  border-radius: 20rpx;
 }
 .bookInfo{
   padding-left: 15rpx;
+  height: 100%;
   overflow: hidden;
 }
 .bookTitle{
   display: block;
 }
 .bookDetail{
+  width: 100%;
+  height: 60rpx;
+  overflow: hidden;
   margin: 15rpx 0rpx;
-  display: block;
+  /* display: block; */
   font-size: 25rpx;
   color: #999999;
   text-overflow: ellipsis;
-  /* white-space:nowrap; */
+  /* white-space: nowrap; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

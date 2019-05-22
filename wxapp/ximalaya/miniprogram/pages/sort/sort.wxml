@@ -1,2 +1,5 @@
 <!--miniprogram/pages/sort/sort.wxml-->
-<text>miniprogram/pages/sort/sort.wxml</text>
+<view class="search">
+  <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
+  <input type="string" placeholder="搜索你想听的节目"/>
+</view>
