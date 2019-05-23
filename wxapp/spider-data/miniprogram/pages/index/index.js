@@ -26,9 +26,11 @@ Page({
           })
             .get()
             .then(res => {
+              // console.log(res);
               this.setData({
                 youhuiLists: res.data[0]['youhuiLists']
               })
+              // console.log(this);
               wx.hideLoading();
             })
         } else {
