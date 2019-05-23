@@ -1,16 +1,16 @@
 /**index.wxss**/
-.searchicon{
-  padding: 15rpx 15rpx;
-  width: 40rpx;
-  height: 40rpx;
-  float: left;
-}
 .search{
   background-color: #dddddd;
   font-size: 30rpx;
   margin: 20rpx 20rpx;
   border-radius: 15rpx;
   box-sizing: border-box;
+}
+.searchicon{
+  padding: 15rpx 15rpx;
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
 }
 .search input{
   height: 70rpx;
@@ -29,6 +29,7 @@
   height: 100%;
   border-radius: 25rpx;
 }
+
 .options{
   height: 150rpx;
   /* background-color: #dddddd; */
@@ -53,6 +54,7 @@
 .optionword{
   font-size: 23rpx;
 }
+
 .recommend{
   /* background-color: #dddddd; */
   margin: 20rpx 20rpx;
@@ -100,6 +102,7 @@
   position: absolute;
   left: 70%;
 }
+
 .sort{
   /* background-color: #dddddd; */
   margin: 40rpx 20rpx;

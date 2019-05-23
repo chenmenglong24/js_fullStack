@@ -1,19 +1,80 @@
 /* miniprogram/pages/sort/sort.wxss */
+page{
+  height: 100%;
+}
+
+.search{
+  background-color: #dddddd;
+  font-size: 30rpx;
+  margin: 20rpx 20rpx;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+}
 .searchicon{
     padding: 15rpx 15rpx;
     width: 40rpx;
     height: 40rpx;
     float: left;
   }
-  .search{
-    background-color: #dddddd;
-    font-size: 30rpx;
-    margin: 20rpx 20rpx;
-    border-radius: 15rpx;
-    box-sizing: border-box;
-  }
-  .search input{
-    height: 70rpx;
-    vertical-align: middle;
-    display: inline-block;
-  }
+.search input{
+  height: 70rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.sort{
+  height: 100%;
+  margin-top: 40rpx;
+  background-color: #dddddd;
+  overflow-y: scroll;
+}
+.category{
+  float: left;
+  width: 150rpx;
+  height: 100%;
+  border: 5rpx solid #AB956D;
+  box-sizing: border-box;
+}
+.category-item{
+  font-size: 32rpx;
+  color: #666666;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  /* border-left: 5rpx solid #dddddd; */
+}
+.sort-main{
+  float: right;
+  /* height: 100%; */
+  width: 79%;
+  border: 5rpx solid #999999;
+  box-sizing: border-box;
+}
+.detail-title{
+  text-align: center;
+  font-size: 35rpx;
+}
+.right-arrow{
+  display: inline-block;
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 5rpx solid red;
+  border-right: 5rpx solid red;
+  transform: rotate(45deg);
+}
+.detail{
+  padding: 10rpx;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20rpx 0 0 20rpx;
+}
+.detail-item{
+  float: left;
+  padding: 15rpx;
+  border: 3rpx solid red;
+  width: 33%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
