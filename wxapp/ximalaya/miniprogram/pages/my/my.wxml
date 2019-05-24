@@ -4,4 +4,5 @@
         <image src="../../images/undeath.jpg"/>
     </view>
     <view class="nickname">想不出名字</view>
+    <view class="kefu">客服服务</view>
 </view>
