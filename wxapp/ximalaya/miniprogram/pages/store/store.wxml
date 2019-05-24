@@ -1,2 +1,38 @@
 <!--miniprogram/pages/store/store.wxml-->
-<text>miniprogram/pages/store/store.wxml</text>
+<view class="search">
+  <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
+  <input type="string" placeholder="搜索你想听的节目"/>
+</view>
+
+<view class="navigation-bar">
+    <view class="item">我的收藏</view>
+    <view class="item">我的已购</view>
+    <view class="item">收听历史</view>
+</view>
+
+<view class="books">
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+      <view class="delete">x</view>
+    </view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+      <view class="delete">x</view>
+    </view>
+    <view class="book">
+      <image class="bookImg" src="../../images/item2.jpg"/>
+      <view class="bookInfo">
+        <text class="bookTitle">书籍标题</text>
+        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
+      </view>
+      <view class="delete">x</view>
+    </view>
+</view>

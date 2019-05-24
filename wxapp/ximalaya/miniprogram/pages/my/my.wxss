@@ -1,1 +1,19 @@
 /* miniprogram/pages/my/my.wxss */
+page{
+    height: 100%;
+    background-color: #dddddd;
+}
+.top{
+    height: 20%;
+}
+.avatar{
+    /* display: inline-block; */
+    float: left;
+    height: 100%;
+    width: 25%;
+}
+.avatar image{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}

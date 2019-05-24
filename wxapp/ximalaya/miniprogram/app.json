@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/sort/sort",
-    "pages/index/index",
+    "pages/my/my",
     "pages/store/store",
-    "pages/my/my"
+    "pages/sort/sort",
+    "pages/index/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
