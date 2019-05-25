@@ -5,4 +5,31 @@
     </view>
     <view class="nickname">想不出名字</view>
     <view class="kefu">客服服务</view>
+    <view class="register">
+        <image src="../../images/register.png"/>
+        <view>签到</view>
+        <span class="right-arrow"></span>
+    </view>
+</view>
+
+<view class="main">
+    <view class="func">
+        <image src="../../images/timeclosure.png"/>
+        <view>定时关闭</view>
+        <span class="right-arrow"></span>
+    </view>
+    <view class="func">
+        <image src="../../images/lighter.png"/>
+        <view >夜间模式</view>
+        <span class="right-arrow"></span>
+    </view>
+    <view class="func">
+        <image src="../../images/switch.png"/>
+        <view >切换账号</view>
+        <span class="right-arrow"></span>
+    </view><view class="func">
+        <image src="../../images/suggest.png"/>
+        <view >意见反馈</view>
+        <span class="right-arrow"></span>
+    </view>
 </view>

@@ -15,7 +15,7 @@ page{
     height: 50%;
     width: 20%; 
     border: 3rpx solid red;
-    padding: 20rpx 0rpx 50rpx 40rpx;
+    padding: 20rpx 0rpx 10rpx 40rpx;
 }
 .avatar image{
     height: 120rpx;
@@ -41,4 +41,65 @@ page{
     border-radius: 25rpx;
     padding: 5rpx 10rpx;
     vertical-align: center;
+}
+.register{
+    position: absolute;
+    top: 62%;
+    width: 100%;
+    border: 3rpx solid red;
+    padding: 10rpx 40rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+}
+.register image{
+    padding: 15rpx 20rpx 0 0;
+    height: 50rpx;
+    width: 50rpx;
+    display: inline-block;
+}
+.register view{
+    display: inline-block;
+    font-size: 35rpx;
+    position: relative;
+    bottom: 10rpx;
+}
+.right-arrow{
+    float: right;
+    position: relative;
+    /* margin-left: 20rpx;
+    margin-bottom: 4rpx; */
+    /* display: inline-block; */
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #aaaaaa;
+    border-right: 4rpx solid #aaaaaa;
+    top: 45%;
+    transform: rotate(45deg);
+}
+
+.main{
+    margin-top: 10rpx;
+    height: 500rpx;
+    background-color: #ffffff;
+}
+.func{
+    /* position: absolute; */
+    top: 62%;
+    width: 100%;
+    border: 3rpx solid red;
+    padding: 10rpx 40rpx;
+    height: 125rpx;
+    box-sizing: border-box;
+}
+.func image{
+    padding: 30rpx 20rpx 0 0;
+    height: 50rpx;
+    width: 50rpx;
+    display: inline-block;
+}
+.func view{
+    display: inline-block;
+    font-size: 35rpx;
+    position: relative;
+    bottom: 10rpx;
 }
