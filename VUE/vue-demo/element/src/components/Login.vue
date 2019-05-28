@@ -31,7 +31,7 @@ export default {
         login () {
             if (this.user && this.password) {
                 localStorage.setItem('userName', this.user)
-                // this.$router.push('/hello')  // 字符串
+                this.$router.push('/main')  // 字符串
                 // this.$router.push({ path: '/hello'})  // 对象
                 // this.$router.push({ name: 'HelloWorld', param: { userId: 1 } })
             }
