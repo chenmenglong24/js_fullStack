@@ -6,11 +6,11 @@
       @open="handleOpen"
       @close="handleClose"
       background-color="#dddddd"
-      text-color="#fff"
+      text-color="#666666"
       active-text-color="#409EFF"
       router
     >
-      <el-menu-item index="/">
+      <el-menu-item index="/main">
         <i class="el-icon-menu"></i>
         <span slot="title">首页</span>
       </el-menu-item>
@@ -20,7 +20,7 @@
           <span>用户管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="2-1">用户列表</el-menu-item>
+          <el-menu-item index="/main/user-list">用户列表</el-menu-item>
           <el-menu-item index="2-2">用户信息</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
@@ -43,9 +43,9 @@ export default {
   left: 0;
   top: 70px;
   bottom: 0;
-  background-color: #2e363f;
+  background: #2e363f;
 }
-.sliderbar > ul {
+.slidebar > ul {
   height: 100%;
 }
 </style>

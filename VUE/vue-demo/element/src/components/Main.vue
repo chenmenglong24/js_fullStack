@@ -2,6 +2,7 @@
   <div class="main-content">
     <Header></Header>
     <Slide></Slide>
+    <router-view></router-view>
   </div>
 </template>
 
