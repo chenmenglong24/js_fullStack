@@ -11,7 +11,17 @@
 </view>
 
 <view class="books">
+  <block wx:for="{{books}}" wx:key="{{index}}">
     <view class="book">
+      <image class="bookImg" src="{{books.src}}"/>
+      <view class="bookInfo">
+        <text class="bookTitle">{{books.title}}</text>
+        <text class="bookDetail">{{books.detail}}</text>
+      </view>
+      <view class="delete">x</view>
+    </view>
+  </block>
+    <!-- <view class="book">
       <image class="bookImg" src="../../images/item2.jpg"/>
       <view class="bookInfo">
         <text class="bookTitle">书籍标题</text>
@@ -26,13 +36,5 @@
         <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
       </view>
       <view class="delete">x</view>
-    </view>
-    <view class="book">
-      <image class="bookImg" src="../../images/item2.jpg"/>
-      <view class="bookInfo">
-        <text class="bookTitle">书籍标题</text>
-        <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
-      </view>
-      <view class="delete">x</view>
-    </view>
+    </view> -->
 </view>

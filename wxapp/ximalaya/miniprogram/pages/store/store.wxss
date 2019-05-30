@@ -23,7 +23,7 @@ page{
 }
 
 .navigation-bar{
-    border: 3rpx solid red;
+    /* border: 3rpx solid red; */
     margin: 30rpx 0rpx 20rpx 0rpx;
     padding: 20rpx 20rpx 0rpx 20rpx;
     border-bottom: 5rpx solid #dddddd;
@@ -33,7 +33,7 @@ page{
     width: 30%;
     margin: 0rpx 10rpx;
     height: 60rpx;
-    border: 3rpx solid red;
+    /* border: 3rpx solid red; */
     border-bottom: 5rpx solid #AB956D;
     text-align: center;
     display: inline-block;
@@ -65,7 +65,7 @@ page{
     float: left;
     height: 100%;
     width: 50%;
-    border: 3rpx solid red;
+    /* border: 3rpx solid red; */
     overflow: hidden;
 }
 .bookTitle{
