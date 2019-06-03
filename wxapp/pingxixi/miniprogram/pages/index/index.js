@@ -13,6 +13,7 @@ Page({
   },
 
   onWeixinLogin(e){
+    console.log(e);
     const userInfo = e.detail.userInfo;
     if(userInfo){
       this.handleLogin();
