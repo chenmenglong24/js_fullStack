@@ -50,6 +50,11 @@
           </li>
         </ul>
       </div>
+      <shopcart ref="shopcart" 
+        :selectFoods="selectFoods" 
+        :deliveryPrice="seller.deliveryPrice" 
+        :minPrice="seller.minPrice"
+      ></shopcart>
     </div>
   </div>
 </template>
@@ -57,6 +62,7 @@
 <script>
 import BScroll from 'better-scroll'
 import cartcontrol from '@/components/cartcontrol/cartcontrol'
+import shopcart from '@/components/shopcart/shopcart'
 export default {
   name: 'Goods',
   props: {
@@ -81,10 +87,22 @@ export default {
         }
       }
       return 0
+    },
+    selectFoods () {
+      let foods = []
+      this.goods.forEach(good => {
+        good.foods.forEach(food => {
+          if (food.count) {
+            foods.push(food)
+          }
+        })
+      })
+      return foods
     }
   },
   components: {
-    cartcontrol
+    cartcontrol,
+    shopcart
   },
   methods: {
     selectMenu(index, event) {
@@ -124,7 +142,7 @@ export default {
       this.foodsScroll.on('scroll', pos => {
         // console.log(pos)
         this.scrollY = Math.abs(Math.round(pos.y))
-        console.log(this.currentIndex)
+        // console.log(this.currentIndex)
       })
     },
     _calculateHeight () {
@@ -143,7 +161,7 @@ export default {
 
     this.$http.get('https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example/123')
       .then(res => {
-        // console.log(res)
+        console.log(res)
         if (res.data.errno === 0) {
           this.goods = res.data.data
           this.$nextTick(() => { //页面渲染完成才能执行
