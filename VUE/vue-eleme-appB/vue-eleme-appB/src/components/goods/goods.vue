@@ -109,8 +109,8 @@ export default {
       if (!event._constructed) {
         return;
       }
-      console.log(this.currentIndex);
-      console.log(this.listHeight);
+      // console.log(this.currentIndex);
+      // console.log(this.listHeight);
       let foodList = this.$refs.foodList;
       let el = foodList[index];
       this.foodsScroll.scrollToElement(el, 300);
