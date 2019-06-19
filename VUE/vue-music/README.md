@@ -1,4 +1,4 @@
-# vue-eleme-app
+# vue-music
 
 > A Vue.js project
 
