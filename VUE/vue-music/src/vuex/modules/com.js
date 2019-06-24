@@ -3,7 +3,8 @@ import * as types from '../types'
 
 const state = {
   showSidebar: false,
-  fullScreen: false
+  fullScreen: false,
+  // playlist,
 }
 
 const mutations = {

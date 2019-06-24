@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import search from '../components/pages/search'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -14,7 +15,7 @@ export default new Router({
     },
     {
       path: '/search',
-      name: 'search',
+      name: 'Search',
       component: search
     }
   ]

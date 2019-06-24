@@ -71,15 +71,21 @@ export default {
       type: String,
       default: DIRECTION_V
     }
+
   },
   mounted () {
     setTimeout(() => {
       this._initScroll()
     }, 20)
   },
+  data() {
+    return {
+
+    }
+  },
   methods: {
-    _initScroll () {
-      if (this.$refs.wrapper) {
+    _initScroll() {
+      if (!this.$refs.wrapper) {
         return
       }
       this.scroll = new BScroll(this.$refs.wrapper, {
@@ -87,29 +93,30 @@ export default {
         probeType: this.probeType,
         eventPassthrough: this.direction === DIRECTION_V ? DIRECTION_H : DIRECTION_V
       })
-      //派发滚动事件
+
+      // 派发滚动事件
       if (this.listenScroll) {
         this.scroll.on('scroll', (pos) => {
           this.$emit('scroll', pos)
         })
       }
-      //派发滚动到底部事件，用于上拉加载更多
+      // 派发滚动到底部事件，用于上拉加载更多
       if (this.pullup) {
         this.scroll.on('scrollEnd', () => {
-          if(this.scroll.y <= (this.scroll.maxScrollY + 50)){
+          if(this.scroll.y <= (this.scroll.maxScrollY + 50)) {
             this.$emit('scrollEnd')
           }
         })
-      }
-      //派发顶部下拉事件，用于下拉刷新
+      } 
+      // 派发顶部下拉事件，用于下拉刷新
       if (this.pulldown) {
         this.scroll.on('touchend', (pos) => {
-          if(pos.y > 50) {
+          if (pos.y > 50) {
             this.$emit('pulldown')
           }
         })
       }
-      //是否派发列表滚动开始事件
+      // 是否派发列表滚动开始的事件
       if (this.beforeScroll) {
         this.scroll.on('beforeScrollStart', () => {
           this.$emit('beforeScroll')
@@ -135,11 +142,12 @@ export default {
     scrollToElement() {
       // 代理better-scroll的scrollToElement方法
       this.scroll && this.scroll.scrollToElement.apply(this.scroll, arguments)
-    }
+    },
+
   },
   watch: {
-    //监听数据的变化，延时refreshDelay的时间后调用refresh方法，保证滚动效果正常
-    data () {
+    // 监听数据的变化，延时refreshDelay的时间后调用refresh方法, 保证滚动效果正常
+    data() {
       setTimeout(() => {
         this.refresh()
       }, this.refreshDelay)
