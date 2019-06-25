@@ -14,7 +14,7 @@
     </nav>
     <div class="container">
       <div class="col-sm-3">
-        <sidebar></sidebar>
+        <Sidebar></Sidebar>
       </div>
       <div class="col-sm-9">
         <router-view></router-view>

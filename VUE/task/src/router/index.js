@@ -2,15 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '../components/Home'
-import TimeEntries from '../components/TimeEntries.vue'
-import LogTime from '../components/LogTime.vue'
+import TimeEntries from '../components/TimeEntries'
+import LogTime from '../components/LogTime'
 import NotFound from '../components/404'
 
 Vue.use(Router)
-
-const router = new Router({
-  routes
-})
 
 export default new Router({
   routes: [
@@ -37,5 +33,9 @@ export default new Router({
   ]
 
 })
+
+// const router = new Router({
+//   routes
+// })
 
 
