@@ -53,10 +53,8 @@ import { searchMixin } from '@/common/mixin.js'
 export default {
   data () {
     return {
-      query: '',
       shortcut: [],
-      hotKey: [],
-      refreshDelay: 2
+      hotKey: []
     }
   },
   components: {
