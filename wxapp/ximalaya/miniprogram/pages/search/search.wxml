@@ -1,1 +1,16 @@
 <!--miniprogram/pages/search/search.wxml-->
+<view class="search">
+  <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
+  <input type="string" bindfocus="goSearch" placeholder="搜索你想听的节目"/>
+</view>
+
+<view class="HOT">
+  <view class="hot">热门搜索</view>
+  <view class="hotKey">
+    <ul>
+      <block wx:for="{{hotVoice}}">
+        <li>{{item.rank}} {{item.book}}</li>
+      </block>
+    </ul>
+  </view>
+</view>

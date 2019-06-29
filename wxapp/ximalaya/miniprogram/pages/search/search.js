@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hotVoice: [
+      {rank: 1, book: '明朝那些事'},
+      {rank: 2, book: '小王子'},
+      {rank: 3, book: '郭德纲精品相声'},
+      {rank: 4, book: '龙族'},
+      {rank: 5, book: '秘密花园'},
+      {rank: 6, book: '十一月的肖邦'}
+    ]
   },
 
   /**

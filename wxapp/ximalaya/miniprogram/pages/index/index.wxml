@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="search">
   <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
-  <input type="string" placeholder="搜索你想听的节目"/>
+  <input type="string" bindfocus="goSearch" placeholder="搜索你想听的节目"/>
 </view>
 
 <view class="swiperBox">
@@ -73,7 +73,7 @@
     <view class="book">
       <image class="bookImg" src="../../images/item2.jpg"/>
       <view class="bookInfo">
-        <text class="bookTitle">书籍标题</text>
+        <text class="bookTitle">书籍标题书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介</text>
         <text class="bookDetail">书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书介书籍简介介书籍简介介书籍简介介书籍简介介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介书籍简介</text>
       </view>
     </view>

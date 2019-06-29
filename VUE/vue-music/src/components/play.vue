@@ -197,7 +197,15 @@ export default {
   },
   methods: {
     prev() {},
-    togglePlaying() {},
+    togglePlaying() {
+      if (!this.songReady) {
+        return
+      }
+      this.setPlaying(!this.playing)
+      if (this.currentLyric) {
+        this.currentLyric.togglePlay()
+      } 
+    },
     next() {},
     showPlaylist() {},
     format(interval) {
@@ -330,7 +338,7 @@ export default {
       }
       const audio = this.$refs.audio;
       this.$nextTick(() => {
-        newPlaying ? audio.play() : audio.paused();
+        newPlaying ? audio.play() : audio.pause()
       });
       if (!newPlaying) {
         if (this.fullScreen) {

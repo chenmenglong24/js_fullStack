@@ -9,7 +9,11 @@ Page({
       '../../images/kobe.jpg'
     ]
   },
-
+  goSearch () {
+    wx.navigateTo({
+      url: '../search/search'
+    })
+  },
   onLoad: function() {
     if (!wx.cloud) {
       wx.redirectTo({

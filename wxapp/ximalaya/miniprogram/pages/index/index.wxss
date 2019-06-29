@@ -89,6 +89,12 @@
 }
 .recommend-item text{
   font-size: 32rpx;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .item1{
   position: absolute;
@@ -134,6 +140,9 @@
 }
 .bookTitle{
   display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
 }
 .bookDetail{
   width: 100%;
