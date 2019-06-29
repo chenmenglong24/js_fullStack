@@ -1,7 +1,12 @@
 <!--miniprogram/pages/sort/sort.wxml-->
-<view class="search">
-  <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
-  <input type="string" placeholder="搜索你想听的节目"/>
+<view class="search-box">
+  <view class="searchBox">
+    <view class="search">
+      <image  class="searchicon" src="../../images/searchicon.png" alt=""/>
+      <input type="string" placeholder="搜索你想听的节目"/>
+    </view>
+  </view>
+  <view class="zhuzi"></view>
 </view>
 
 <view class="sort">
