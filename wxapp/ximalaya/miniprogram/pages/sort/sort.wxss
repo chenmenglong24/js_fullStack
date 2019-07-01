@@ -39,6 +39,7 @@ page{
   background-color: #dddddd;
   /* overflow-y: scroll; */
   overflow: hidden;
+  height: 90%;
 }
 .category{
   float: left;
@@ -47,7 +48,7 @@ page{
   /* border: 5rpx solid #AB956D; */
   box-sizing: border-box;
   overflow: hidden;
-  height: 1000rpx;
+  height: 100%;
   overflow-y : auto;
 }
 .category-item{
@@ -60,13 +61,12 @@ page{
 }
 .sort-main{
   float: right;
-  /* height: 100%; */
+  height: 100%;
   width: 75%;
   padding: 30rpx 0rpx;
   /* border: 5rpx solid #999999; */
   box-sizing: border-box;
   overflow: hidden;
-  height: 1000rpx;
   overflow-y : auto;
 }
 .sort-main-detail{
