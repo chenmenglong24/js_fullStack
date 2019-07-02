@@ -11,22 +11,9 @@
 
 <view class="sort">
   <view class="category">
-    <view class="category-item">最近浏览</view>
-    <view class="category-item">有声书</view>
-    <view class="category-item">畅销书</view>
-    <view class="category-item">情感</view>
-    <view class="category-item">生活</view>
-    <view class="category-item">人文历史</view>
-    <view class="category-item">国学书院</view>
-    <view class="category-item">英语</view>
-    <view class="category-item">最近浏览</view>
-    <view class="category-item">有声书</view>
-    <view class="category-item">畅销书</view>
-    <view class="category-item">情感</view>
-    <view class="category-item">生活</view>
-    <view class="category-item">人文历史</view>
-    <view class="category-item">国学书院</view>
-    <view class="category-item">英语</view>
+    <block wx:for="{{categorys}}">
+      <view class="category-item">{{item.category}}</view> 
+    </block>
   </view>
   <view class="sort-main">
     <view class="sort-main-detail">

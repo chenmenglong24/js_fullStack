@@ -1,11 +1,27 @@
-// miniprogram/pages/sort/sort.js
+// miniprogram/pages/category/category.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    categorys: [
+      {category: '最近浏览'},
+      {category: '有声书'},
+      {category: '畅销书'},
+      {category: '情感生活'},
+      {category: '生活'},
+      {category: '人文'},
+      {category: '国学书院'},
+      {category: '音乐'},
+      {category: '历史'},
+      {category: '相声评书'},
+      {category: '英语'},
+      {category: '健康养生'},
+      {category: '教育培训'},
+      {category: '广播剧'},
+      {category: '戏曲'},
+    ]
   },
 
   /**
