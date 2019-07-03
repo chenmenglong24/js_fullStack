@@ -63,7 +63,7 @@ page{
   float: right;
   height: 100%;
   width: 75%;
-  padding: 30rpx 0rpx;
+  /* padding: 30rpx 0rpx; */
   /* border: 5rpx solid #999999; */
   box-sizing: border-box;
   overflow: hidden;

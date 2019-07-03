@@ -11,88 +11,24 @@
 
 <view class="sort">
   <view class="category">
-    <block wx:for="{{categorys}}">
+    <block wx:for="{{categorys}}" wx:key="index">
       <view class="category-item">{{item.category}}</view> 
     </block>
   </view>
+
   <view class="sort-main">
-    <view class="sort-main-detail">
-      <view class="detail-title">
-        <text>最近浏览</text>
-        <span class="right-arrow"></span>
+    <block wx:for="{{categorys}}" wx:key="index">
+      <view class="sort-main-detail">
+        <view class="detail-title">
+          <text>{{item.category}}</text>
+          <span class="right-arrow"></span>
+        </view>
+        <view class="detail">
+          <block wx:for="{{item.sort}}" wx:key="index">
+            <view class="detail-item">{{item}}</view>
+          </block>
+        </view>
       </view>
-      <view class="detail">
-        <view class="detail-item">有声书</view>
-        <view class="detail-item">英语</view>
-        <view class="detail-item">武侠</view>
-        <view class="detail-item">历史</view>
-        <view class="detail-item">生活</view>
-      </view>
-    </view>
-    <view class="sort-main-detail">
-      <view class="detail-title">
-        <text>最近浏览</text>
-        <span class="right-arrow"></span>
-      </view>
-      <view class="detail">
-        <view class="detail-item">有声书</view>
-        <view class="detail-item">英语</view>
-        <view class="detail-item">武侠</view>
-        <view class="detail-item">历史</view>
-        <view class="detail-item">生活</view>
-      </view>
-    </view>
-    <view class="sort-main-detail">
-      <view class="detail-title">
-        <text>最近浏览</text>
-        <span class="right-arrow"></span>
-      </view>
-      <view class="detail">
-        <view class="detail-item">有声书</view>
-        <view class="detail-item">英语</view>
-        <view class="detail-item">武侠</view>
-        <view class="detail-item">历史</view>
-        <view class="detail-item">生活</view>
-      </view>
-    </view>
-    <view class="sort-main-detail">
-      <view class="detail-title">
-        <text>最近浏览</text>
-        <span class="right-arrow"></span>
-      </view>
-      <view class="detail">
-        <view class="detail-item">有声书</view>
-        <view class="detail-item">英语</view>
-        <view class="detail-item">武侠</view>
-        <view class="detail-item">历史</view>
-        <view class="detail-item">生活</view>
-      </view>
-    </view>
-    <view class="sort-main-detail">
-      <view class="detail-title">
-        <text>最近浏览</text>
-        <span class="right-arrow"></span>
-      </view>
-      <view class="detail">
-        <view class="detail-item">有声书</view>
-        <view class="detail-item">英语</view>
-        <view class="detail-item">武侠</view>
-        <view class="detail-item">历史</view>
-        <view class="detail-item">生活</view>
-      </view>
-    </view>
-    <view class="sort-main-detail">
-      <view class="detail-title">
-        <text>最近浏览</text>
-        <span class="right-arrow"></span>
-      </view>
-      <view class="detail">
-        <view class="detail-item">有声书</view>
-        <view class="detail-item">英语</view>
-        <view class="detail-item">武侠</view>
-        <view class="detail-item">历史</view>
-        <view class="detail-item">生活</view>
-      </view>
-    </view>
+    </block>
   </view>
 </view>
