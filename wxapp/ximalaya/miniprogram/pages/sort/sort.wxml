@@ -24,7 +24,7 @@
           <span class="right-arrow"></span>
         </view>
         <view class="detail">
-          <block wx:for="{{item.sort}}" wx:key="index">
+          <block wx:for="{{item.sort}}" wx:for-index="index">
             <view class="detail-item">{{item}}</view>
           </block>
         </view>
