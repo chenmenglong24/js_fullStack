@@ -31,7 +31,6 @@ export default new Router({
       component: NotFound
     }
   ]
-
 })
 
 // const router = new Router({
