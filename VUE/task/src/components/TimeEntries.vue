@@ -30,7 +30,7 @@
               </h3>
               <p class="label label-primary text-center">
                 <i class="glyphicon-calendar"></i>
-                {{ plan.data }}
+                {{ plan.date }}
               </p>
             </div>
             <div class="col-sm-7 comment-section">
