@@ -1,12 +1,13 @@
 <template>
   <div>
+    <span @click="back"><mt-cell class="back" icon="back"></mt-cell></span>
     <div class="search">
       <input v-model="value" :result="filterResult">
     </div>
     <!-- 搜索结果 -->
     <div class="search-result" v-if="value.length">
       <ul>
-        <li v-for="item in filterResult">{{item}}</li>
+        <li v-for="(item, index) in filterResult" :key="index">{{item}}</li>
       </ul>
     </div>
     <!-- 热门搜索 -->
@@ -50,11 +51,24 @@ export default {
     filterResult() {
       return this.defaultResult.filter(item => new RegExp(this.value, 'i').test(item));
     }
+  },
+  methods: {
+    back () {
+      this.$router.go(-1);
+    }
   }
 };
 </script>
 
 <style lang="css" scoped>
+.back{
+  display: inline-block;
+  position: static;
+  overflow: visible;
+}
+.search{
+  display: inline-block;
+}
 .search-result ul{
   padding: 0;
 }

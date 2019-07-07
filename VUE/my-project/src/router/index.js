@@ -15,6 +15,7 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
+      redirect: '/discover',
       children: [
         {
           path: '/my',
