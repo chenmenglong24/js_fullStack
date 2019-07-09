@@ -19,11 +19,13 @@
       </div>
     </div>
     <router-view/>
+    <v-playbar></v-playbar>
   </div>
 </template>
 <script>
 import Sidebar from './Sidebar'
-import sidebarVue from '../../../vue-music/src/components/sidebar.vue';
+import sidebarVue from '../../../vue-music/src/components/sidebar.vue'
+import Playbar from './Playbar'
 export default {
   data () {
     return {
@@ -32,7 +34,8 @@ export default {
     }
   },
   components: {
-    'v-sidebar': Sidebar
+    'v-sidebar': Sidebar,
+    'v-playbar': Playbar
   },
   methods: {
     showside () {
