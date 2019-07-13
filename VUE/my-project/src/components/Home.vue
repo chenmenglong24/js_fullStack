@@ -7,25 +7,26 @@
         <img slot="icon" src="../assets/more.svg" width="24" height="24" @click="showside">
       </mt-cell>
       <div class="search">
-        <router-link to="/search">
+        <router-link tag="span" to="/search">
           <input type="text" placeholder="搜索教材、课程">
         </router-link>
       </div>
       <div>
-        <router-link to="/my">我的</router-link>
-        <router-link to="/discover">发现</router-link>
-        <router-link to="/sort">分类</router-link>
-        <router-link to="/recommend">推荐</router-link>
+        <router-link tag="span" to="/my" :id="0" @click.native="select">我的</router-link>
+        <router-link tag="span" to="/discover" :id="1" @click.native="select">发现</router-link>
+        <router-link tag="span" to="/sort" :id="2" @click.native="select">分类</router-link>
+        <router-link tag="span" to="/recommend" :id="3" @click.native="select">推荐</router-link>
       </div>
     </div>
     <router-view/>
-    <v-playbar></v-playbar>
+    <router-link tag="span" to="/play">
+      <v-footbar></v-footbar>
+    </router-link>
   </div>
 </template>
 <script>
 import Sidebar from './Sidebar'
-import sidebarVue from '../../../vue-music/src/components/sidebar.vue'
-import Playbar from './Playbar'
+import Footbar from './Footbar'
 export default {
   data () {
     return {
@@ -35,7 +36,7 @@ export default {
   },
   components: {
     'v-sidebar': Sidebar,
-    'v-playbar': Playbar
+    'v-footbar': Footbar
   },
   methods: {
     showside () {
@@ -45,7 +46,14 @@ export default {
     clearHide () {
       this.hide = false
       this.$refs.showside.hide = true
+    },
+    select (e) {
+      // console.log(e)
+      return e.target.id
     }
+  },
+  mounted () {
+    
   }
 }
 </script>
@@ -66,5 +74,11 @@ export default {
   height: 100%;
   left: 0;
   opacity: 0.5;
+}
+ul{
+  padding: 0;
+
+  list-style-type: none;
+  display: inline;
 }
 </style>

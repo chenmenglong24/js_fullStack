@@ -6,6 +6,7 @@ import Home from '@/components/Home'
   import Sort from '@/components/Sort'
   import Recommend from '@/components/Recommend'
 import Search from '@/components/Search'
+import Play from '@/components/Play'
 
 Vue.use(Router)
 
@@ -43,6 +44,11 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/play',
+      name: 'Play',
+      component: Play
     }
   ]
 })
