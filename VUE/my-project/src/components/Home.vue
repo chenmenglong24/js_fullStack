@@ -8,14 +8,16 @@
       </mt-cell>
       <div class="search">
         <router-link tag="span" to="/search">
-          <input type="text" placeholder="搜索教材、课程">
+          <span>搜索教材、课程、资料...</span>
         </router-link>
       </div>
-      <div>
-        <router-link tag="span" to="/my" :id="0" @click.native="select">我的</router-link>
-        <router-link tag="span" to="/discover" :id="1" @click.native="select">发现</router-link>
-        <router-link tag="span" to="/sort" :id="2" @click.native="select">分类</router-link>
-        <router-link tag="span" to="/recommend" :id="3" @click.native="select">推荐</router-link>
+    </div>
+    <div class="navigation-box">
+      <div class="navigation-bar">
+        <router-link tag="span" class="navigate" to="/my" :id="0" @click.native="select">我的</router-link>
+        <router-link tag="span" class="navigate" to="/discover" :id="1" @click.native="select">发现</router-link>
+        <router-link tag="span" class="navigate" to="/sort" :id="2" @click.native="select">分类</router-link>
+        <router-link tag="span" class="navigate" to="/recommend" :id="3" @click.native="select">推荐</router-link>
       </div>
     </div>
     <router-view/>
@@ -67,6 +69,9 @@ export default {
 .search{
   display: inline-block;
 }
+.search span{
+  color: #999999;
+}
 .hide{
   position: absolute;
   background-color: #999999;
@@ -75,10 +80,17 @@ export default {
   left: 0;
   opacity: 0.5;
 }
-ul{
-  padding: 0;
-
-  list-style-type: none;
-  display: inline;
+.navigation-box{
+  border-bottom: 1.5px solid rgba(99, 99, 99, 0.1);
+}
+.navigation-bar{
+  display: flex;
+  margin: 10px 20px;
+  justify-content: space-between;
+}
+.navigate{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 4px;
 }
 </style>
