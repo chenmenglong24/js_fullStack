@@ -2,18 +2,18 @@
   <div>
     <div class="sidebar" :class="{hidesidebar: hide}">
       <div class="user">
-        <img src="@/assets/avatar.jpg"/>
+        <img src="@/assets/sidebar/avatar.jpg"/>
         <span class="nickname">小飞侠</span>
       </div>
       <div class="side-item">
         <ul>
-          <li><img src="@/assets/message.svg"/>消息中心</li>
-          <li><img src="@/assets/friend.svg"/>我的好友</li>
-          <li><img src="@/assets/history.svg"/>历史记录</li>
-          <li><img src="@/assets/member.svg"/>会员中心</li>
-          <li><img src="@/assets/night.svg"/>夜间模式</li>
-          <li><img src="@/assets/help.svg"/>帮助</li>
-          <li><img src="@/assets/set.svg"/>设置</li>
+          <li><img src="@/assets/sidebar/message.svg"/>消息中心</li>
+          <li><img src="@/assets/sidebar/friend.svg"/>我的好友</li>
+          <li><img src="@/assets/sidebar/history.svg"/>历史记录</li>
+          <li><img src="@/assets/sidebar/member.svg"/>会员中心</li>
+          <li><img src="@/assets/sidebar/night.svg"/>夜间模式</li>
+          <li><img src="@/assets/sidebar/help.svg"/>帮助</li>
+          <li><img src="@/assets/sidebar/set.svg"/>设置</li>
         </ul>
       </div>
     </div>

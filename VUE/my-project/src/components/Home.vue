@@ -8,7 +8,7 @@
       </mt-cell>
       <div class="search">
         <router-link tag="span" to="/search">
-          <span>搜索教材、课程、资料...</span>
+          <span>搜索教材、课程、资料. . .</span>
         </router-link>
       </div>
     </div>
@@ -79,6 +79,7 @@ export default {
   height: 100%;
   left: 0;
   opacity: 0.5;
+  z-index: 99;
 }
 .navigation-box{
   border-bottom: 1.5px solid rgba(99, 99, 99, 0.1);
@@ -91,6 +92,6 @@ export default {
 .navigate{
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 </style>
