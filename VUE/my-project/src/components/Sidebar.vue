@@ -39,7 +39,7 @@ export default {
 <style scoped>
 .sidebar{
   position: absolute;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   height: 100%;
   width: 70%;
   z-index: 100;

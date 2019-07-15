@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  withRouter
-} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
 class Search extends React.Component {
@@ -15,9 +13,7 @@ class Search extends React.Component {
     return (
       <div className="search">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" 
-          ref={this.searchRef}
-          placeholder="Hoppy, Malt, Nanchang 8...." />
+          <input type="text" ref={this.searchRef} placeholder="Hoppy, Malt, Nanchang 8...." />
           <input type="submit" value="Search" />
         </form>
       </div>

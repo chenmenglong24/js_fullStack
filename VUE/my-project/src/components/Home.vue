@@ -91,7 +91,8 @@ export default {
 }
 .navigate{
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 550;
   letter-spacing: 3px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 </style>

@@ -14,9 +14,56 @@
       <div class="icon"><img src="@/assets/iconbar/detail.png"/><span>精讲</span></div>
     </div>
     <div class="update-box">
-      <span>— 今日更新 —</span>
+      <div class="today-update">— 今日更新 —</div>
       <div class="update">
-
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        </div>
       </div>
     </div>
   </div>
@@ -60,18 +107,53 @@ export default {
   display: block;
   font-size: 12px;
   letter-spacing: 1px;
-  color: #222222;
+  color: #555555;
 }
 .update-box{
   padding-top: 10px;
-  height: 150px;
-  background-color: rgba(127, 255, 127, 0.1);
-  text-align: center;
+  height: 145px;
+  background-color: rgba(131, 255, 127, 0.1);
 }
-.update-box span{
+.today-update{
+  text-align: center;
   margin: 5px 0;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+.update{
+  display: flex;
+  margin-top: 20px;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+.update::-webkit-scrollbar {
+  width: 0;
+}
+.update-item{
+  display: inline-block;
+  margin-left: 11px;
+  text-align: center;
+}
+.update-item img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.update-item span{
+  width: 65px;
+  display: block;
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 15px;
+  font-family: monospace;
+  color: #666666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 </style>
