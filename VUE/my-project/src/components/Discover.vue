@@ -22,7 +22,23 @@
         </div>
         <div class="update-item">
           <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
+          <span>标</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题</span>
+        </div>
+        <div class="update-item">
+          <img src="@/assets/swipe.jpg"/>
+          <span>标题标题标题</span>
         </div>
         <div class="update-item">
           <img src="@/assets/swipe.jpg"/>
@@ -41,28 +57,58 @@
           <span>标题标题标题标题标题标题标题标题标题标题</span>
         </div>
         <div class="update-item">
-          <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
+          <div class="update-more">
+            <span>更多</span>
+          </div>
         </div>
         <div class="update-item">
           <img src="@/assets/swipe.jpg"/>
           <span>标题标题标题标题标题标题标题标题标题标题</span>
         </div>
         <div class="update-item">
-          <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
+          <div class="update-more">
+            <span>更多</span>
+          </div>
         </div>
-        <div class="update-item">
-          <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
+      </div>
+    </div>
+    <div class="sorts-box">
+      <div class="title-box">
+        <span class="title">新进教材</span>
+        <span class="more">更多</span>
+      </div>
+      <div class="items">
+        <div class="item">
+          <img src="@/assets/swipe.jpg" />
+          <span>标题标题标题标题标题标题标题标题</span>
         </div>
-        <div class="update-item">
-          <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        <div class="item">
+          <img src="@/assets/swipe.jpg" />
+          <span>标题</span>
         </div>
-        <div class="update-item">
-          <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        <div class="item">
+          <img src="@/assets/swipe.jpg" />
+          <span>标题标题标题标题标题标题标题标题</span>
+        </div>
+      </div>
+    </div>
+    <div class="sorts-box">
+      <div class="title-box">
+        <span class="title">六级考试</span>
+        <span class="more">更多</span>
+      </div>
+      <div class="items">
+        <div class="item">
+          <img src="@/assets/swipe.jpg" />
+          <span>标题标题标题标题</span>
+        </div>
+        <div class="item">
+          <img src="@/assets/swipe.jpg" />
+          <span>标题标</span>
+        </div>
+        <div class="item">
+          <img src="@/assets/swipe.jpg" />
+          <span>标题标题标题标题</span>
         </div>
       </div>
     </div>
@@ -154,6 +200,68 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.update-more{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #999999;
+}
+.sorts-box{
+  margin: 20px 10px;
+}
+.title-box{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: cursive;
+  font-weight: bold;
+}
+.title:before {   
+  content: "";   
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 8px;
+  height: 15px;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: #1afa29;
+}   
+.more{
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #666666;
+}
+.items{
+  margin: 10px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+  width: 110px;
+  text-align: center;
+}
+.item img{
+  width: 100px;
+  height: 105px;
+  border-radius: 10px;
+}
+.item span{
+  display: block;
+  width: 90px;
+  position: relative;
+  left: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 </style>
