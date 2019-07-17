@@ -57,18 +57,7 @@
           <span>标题标题标题标题标题标题标题标题标题标题</span>
         </div>
         <div class="update-item">
-          <div class="update-more">
-            <span>更多</span>
-          </div>
-        </div>
-        <div class="update-item">
-          <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
-        </div>
-        <div class="update-item">
-          <div class="update-more">
-            <span>更多</span>
-          </div>
+          <div class="update-more">更多</div>
         </div>
       </div>
     </div>
@@ -207,6 +196,9 @@ export default {
   height: 50px;
   border-radius: 50%;
   background-color: #999999;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 50px;
 }
 .sorts-box{
   margin: 20px 10px;
