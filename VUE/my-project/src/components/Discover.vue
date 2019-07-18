@@ -195,7 +195,7 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #999999;
+  background-color: #cccccc;
   vertical-align: middle;
   font-size: 12px;
   line-height: 50px;
