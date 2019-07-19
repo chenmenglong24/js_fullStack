@@ -3,7 +3,7 @@
     <span @click="back"><mt-cell class="back" icon="back"></mt-cell></span>
     <div class="search">
       <input v-model="value" :result="filterResult" placeholder="搜索教材、课程、资料. . ." />
-      <button class="btn">搜索</button>
+      <button class="btn" :class="{ifCLick: ifClick}" ref="btn" @touchstart="handleStart" @touchend="handleEnd">搜索</button>
     </div>
     <!-- 搜索结果 -->
     <div class="search-result" v-if="value.length">
@@ -12,14 +12,24 @@
       </ul>
     </div>
     <!-- 热门搜索 -->
-    <div class="hot-key" v-if="!value.length">
+    <div class="hot-key-box" v-if="!value.length">
         <span class="title">热门搜索</span>
+        <div class="hot-keys">
+          <div class="hot-key" v-for="(item, index) in hotKeys" :key="index">{{item}}</div>
+        </div>
     </div>
     <!-- 搜索历史 -->
-    <div class="search-history" v-if="!value.length">
+    <div class="search-history-box" v-if="!value.length">
       <div class="title-box">
         <span class="title">搜索历史</span>
         <span class="delete">删除记录</span>
+        <div class="search-histories">
+          <div class="search-history" v-for="(item, index) in searchHistory" :key="index">
+            <img class="search-img" src="../assets/search-history.png"/>
+            {{item}}
+            <img class="delete-img" src="../assets/delete-history.png"/>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -31,6 +41,7 @@ export default {
   data() {
     return {
       value: '',
+      ifClick: false,
       defaultResult: [
         'Apple',
         'Banana',
@@ -48,6 +59,12 @@ export default {
         'Pear',
         'Peanut',
         'Other'
+      ],
+      hotKeys: [
+        '雅思', '出国', '沪教牛津版英语', 'BBC', '演讲', '心理健康', '语法', '音乐', 'The Big Bang Theory', '教学'
+      ],
+      searchHistory: [
+        '四六级', 'kobe', 'jay'
       ]
     };
   },
@@ -59,6 +76,12 @@ export default {
   methods: {
     back () {
       this.$router.go(-1);
+    },
+    handleStart () {
+      this.ifClick = true;
+    },
+    handleEnd () {
+      this.ifClick = false;
     }
   }
 };
@@ -72,12 +95,30 @@ export default {
 }
 .search{
   display: inline-block;
+  margin-left: 5px;
 }
 .search input{
   border: none;
+  outline: none;
+  height: 48px;
+  width: 65vw;
+  font-size: 16px;
 }
 .btn{
+  margin-left: 10px;
   border: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #cccccc;
+  height: 30px;
+  width: 50px;
+  padding: 5px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.ifCLick{
+  background-color: #999999;
 }
 .search-result ul{
   padding: 0;
@@ -85,16 +126,24 @@ export default {
 .search-result li{
   list-style-type: none;
 }
+.hot-key-box{
+  height: 200px;
+  margin: 10px;
+}
+.hot-keys{
+  margin: 10px 0;
+}
 .hot-key{
-  height: 100px;
-  margin: 10px;
+  display: inline-block;
+  margin: 8px 10px;
+  padding: 5px 10px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #62d3a6;
+  border-radius: 15px;
 }
-.search-history{
+.search-history-box{
   margin: 10px;
-}
-.title-box{
-  display: flex;
-  justify-content: space-between;
 }
 .title{
   font-size: 13px;
@@ -115,5 +164,28 @@ export default {
   font-size: 12px;
   letter-spacing: 1px;
   color: #666666;
+  position: absolute;
+  right: 20px;
 }   
+.search-history{
+  margin: 15px 10px;
+  font-size: 14px;
+  color: #333333;
+  padding: 2px;
+  border-bottom: solid 1px #dddddd;
+}
+.search-img{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.delete-img{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  /* vertical-align: middle; */
+  position: absolute;
+  right: 20px;
+}
+
 </style>

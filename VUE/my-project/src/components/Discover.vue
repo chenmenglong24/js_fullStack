@@ -197,7 +197,7 @@ export default {
   border-radius: 50%;
   background-color: #cccccc;
   vertical-align: middle;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 50px;
 }
 .sorts-box{
