@@ -28,6 +28,20 @@
         <div class="item" v-for="(item, index) in sortItems" :key="index">{{item}}</div>
       </div>
     </div>
+    <div class="sort-item">
+      <div class="title-box">
+        <div class="title">
+          <img src="../assets/sorticon/exam.png"/>
+          <span>英语考试</span>
+        </div>
+        <div class="more">
+          <img src="../assets/sorticon/more.png"/>
+        </div>
+      </div>
+      <div class="items">
+        <div class="item" v-for="(item, index) in sortItems" :key="index">{{item}}</div>
+      </div>
+    </div>
   </div>
 </template>
 <script>

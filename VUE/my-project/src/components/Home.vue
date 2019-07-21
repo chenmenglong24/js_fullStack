@@ -95,4 +95,8 @@ export default {
   letter-spacing: 3px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.content{
+  overflow: hidden;
+  overflow-y: auto;
+}
 </style>

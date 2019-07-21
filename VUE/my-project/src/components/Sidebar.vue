@@ -60,7 +60,7 @@ export default {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  box-shadow: yellow 0px 0px 10px 2px ;
+  box-shadow: greenyellow 0px 0px 15px 5px ;
   vertical-align: middle;
   margin-right: 10px;
 }
