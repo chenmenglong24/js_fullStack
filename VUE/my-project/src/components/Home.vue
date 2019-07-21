@@ -15,7 +15,7 @@
     <div class="navigation-box">
       <div class="navigation-bar">
         <router-link tag="span" class="navigate" to="/my" :id="0" @click.native="select">我的</router-link>
-        <router-link tag="span" class="navigate" to="/discover" :id="1" @click.native="select">发现</router-link>
+        <router-link tag="span" class="navigate select" to="/discover" :id="1" @click.native="select">发现</router-link>
         <router-link tag="span" class="navigate" to="/sort" :id="2" @click.native="select">分类</router-link>
         <router-link tag="span" class="navigate" to="/recommend" :id="3" @click.native="select">精品</router-link>
       </div>
@@ -50,8 +50,10 @@ export default {
       this.$refs.showside.hide = true
     },
     select (e) {
-      // console.log(e)
-      return e.target.id
+      // console.log(e.target.id);
+      var currentId = e.target.id;
+      [...document.getElementsByClassName('navigate')].forEach(element => element.classList.remove('select')); 
+      document.getElementsByClassName('navigate')[currentId].classList.add('select');
     }
   },
   mounted () {
@@ -90,13 +92,24 @@ export default {
   justify-content: space-between;
 }
 .navigate{
+  color: #666666;
   font-size: 20px;
   font-weight: 550;
   letter-spacing: 3px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.content{
-  overflow: hidden;
-  overflow-y: auto;
+.select{
+  color: #000000;
+}
+.select:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 5px;
+  left: 6px;
+  width: 30px;
+  height: 4px;
+  background-color: #1afa29;
+  border-radius: 6px;
 }
 </style>
