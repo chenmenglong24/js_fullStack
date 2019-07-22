@@ -14,10 +14,10 @@
     </div>
     <div class="navigation-box">
       <div class="navigation-bar">
-        <router-link tag="span" class="navigate" to="/my" :id="0" @click.native="select">我的</router-link>
-        <router-link tag="span" class="navigate select" to="/discover" :id="1" @click.native="select">发现</router-link>
-        <router-link tag="span" class="navigate" to="/sort" :id="2" @click.native="select">分类</router-link>
-        <router-link tag="span" class="navigate" to="/recommend" :id="3" @click.native="select">精品</router-link>
+        <router-link tag="span" class="navigate" :id="0" :class="{select:0==current}" @click.native="select" to="/my" >我的</router-link>
+        <router-link tag="span" class="navigate" :id="1" :class="{select:1==current}" @click.native="select" to="/discover">发现</router-link>
+        <router-link tag="span" class="navigate" :id="2" :class="{select:2==current}" @click.native="select" to="/sort">分类</router-link>
+        <router-link tag="span" class="navigate" :id="3" :class="{select:3==current}" @click.native="select" to="/recommend">精品</router-link>
       </div>
     </div>
     <router-view/>
@@ -33,7 +33,8 @@ export default {
   data () {
     return {
       msg: '我是首页的头部',
-      hide: false
+      hide: false,
+      current: '1'
     }
   },
   components: {
@@ -51,13 +52,13 @@ export default {
     },
     select (e) {
       // console.log(e.target.id);
-      var currentId = e.target.id;
-      [...document.getElementsByClassName('navigate')].forEach(element => element.classList.remove('select')); 
-      document.getElementsByClassName('navigate')[currentId].classList.add('select');
+      this.current = e.target.id;
+      localStorage.setItem('current', this.current);
     }
   },
   mounted () {
-    
+    var id = localStorage.getItem('current');
+    this.current = id;
   }
 }
 </script>

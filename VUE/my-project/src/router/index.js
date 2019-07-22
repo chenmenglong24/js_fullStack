@@ -7,6 +7,7 @@ import Home from '@/components/Home'
   import Recommend from '@/components/Recommend'
 import Search from '@/components/Search'
 import Play from '@/components/Play'
+import Detail from '@/components/Detail'
 
 Vue.use(Router)
 
@@ -49,6 +50,11 @@ export default new Router({
       path: '/play',
       name: 'Play',
       component: Play
+    },
+    {
+      path: '/detail',
+      name: 'Detail',
+      component: Detail
     }
   ]
 })

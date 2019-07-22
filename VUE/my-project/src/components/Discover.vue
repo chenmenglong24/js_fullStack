@@ -67,10 +67,12 @@
         <span class="more">更多</span>
       </div>
       <div class="items">
-        <div class="item">
-          <img src="@/assets/swipe.jpg" />
-          <span>标题标题标题标题标题标题标题标题</span>
-        </div>
+        <router-link to='/detail' tag="div">
+          <div class="item">
+            <img src="@/assets/swipe.jpg" />
+            <span>标题标题标题标题标题标题标题标题</span>
+          </div>
+        </router-link>
         <div class="item">
           <img src="@/assets/swipe.jpg" />
           <span>标题</span>

@@ -1,10 +1,10 @@
 <template>
   <div class="my-box">
     <div class="my-items">
-      <div class="my-item select" :id="0" @click="select">我的订阅</div>
-      <div class="my-item" :id="1" @click="select">我的收藏</div>
-      <div class="my-item" :id="2" @click="select">我的下载</div>
-      <div class="my-item" :id="3" @click="select">阅读历史</div>
+      <div class="my-item" :id="0" :class="{select:0==currentId}" @click="select">我的订阅</div>
+      <div class="my-item" :id="1" :class="{select:1==currentId}" @click="select">我的收藏</div>
+      <div class="my-item" :id="2" :class="{select:2==currentId}" @click="select">我的下载</div>
+      <div class="my-item" :id="3" :class="{select:3==currentId}" @click="select">阅读历史</div>
     </div>
     <div class="items-box">
       <div class="items">
@@ -75,17 +75,18 @@ export default {
   data () {
     return {
       msg: '我是My组件',
+      currentId: '0'
     }
   },
   methods: {
     select (e) {
-      var currentId = e.target.id;
-      [...document.getElementsByClassName('my-item')].forEach(element => element.classList.remove('select')); 
-      document.getElementsByClassName('my-item')[currentId].classList.add('select');
+      this.currentId = e.target.id;
+      localStorage.setItem('currentId', this.currentId);
     }
   },
-  activated () {
-    
+  mounted () {
+    var id = localStorage.getItem('currentId');
+    this.currentId = id;
   }
 }
 </script>
