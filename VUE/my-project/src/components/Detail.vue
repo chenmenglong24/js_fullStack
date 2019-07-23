@@ -5,27 +5,27 @@
     </div>
     <div class="details">
       <div class="details-img">
-        <img src="../assets/swipe.jpg"/>
+        <img :src="item.cover"/>
       </div>
-      <span class="title">美国国家公园</span>
-      <div class="desc">简介简介简介</div>
+      <span class="title">{{item.title}}</span>
+      <div class="desc">{{item.desc}}</div>
     </div>
     <div class="options">
-      <div class="option subscribe" :id="0" @click="choose">
-        <img src="../assets/detail/unsubscribe.png" v-if="!ischoose[0]"/>
-        <img src="../assets/detail/subscribe.png" v-if="ischoose[0]"/>
+      <div class="option subscribe" :id="0" @click="subscribe">
+        <img src="../assets/detail/unsubscribe.png" v-show="!isSubscribe"/>
+        <img src="../assets/detail/subscribe.png" v-show="isSubscribe"/>
         <span class="about">订阅</span>
       </div>
       <span class="interval"></span>
-      <div class="option collection" :id="1" @click="choose">
-        <img src="../assets/detail/uncollection.png" v-if="!ischoose[1]"/>
-        <img src="../assets/detail/collection.png" v-if="ischoose[1]"/>
+      <div class="option collect" :id="1" @click="collect">
+        <img src="../assets/detail/uncollection.png" v-if="!isCollect"/>
+        <img src="../assets/detail/collection.png" v-if="isCollect"/>
         <span class="about">收藏</span>
       </div>
       <span class="interval"></span>
-      <div class="option download" :id="2" @click="choose">
-        <img src="../assets/detail/undownload.png" v-if="!ischoose[2]"/>
-        <img src="../assets/detail/download.png" v-if="ischoose[2]"/>
+      <div class="option download" :id="2" @click="download">
+        <img src="../assets/detail/undownload.png" v-if="!isDownload"/>
+        <img src="../assets/detail/download.png" v-if="isDownload"/>
         <span class="about">下载</span>
       </div>
     </div>
@@ -33,24 +33,40 @@
 </template>
 
 <script>
+import Axios from 'axios';
 export default {
   data () {
     return {
-      msg: '我是detail组件',
-      ischoose: [false, false, false]
+      isSubscribe: false,
+      isCollect: false,
+      isDownload: false,
+      item: {}
     }  
   },
   methods: {
     back () {
       this.$router.go(-1);
     },
-    choose (e) {
-      let option = e.target.id;
-      this.$set(this.ischoose, option, !this.ischoose[option]);
+    subscribe () {
+      this.isSubscribe = !this.isSubscribe;
+      
+    },
+    collect () {
+      this.isCollect = !this.isCollect;
+    },
+    download () {
+      this.isDownload = !this.isDownload;
     }
   },
   mounted () {
-
+    var id =  this.$route.query.id;
+    console.log(id);
+    var dataSource = 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example/qingtingyingyu';
+    Axios.get(dataSource).then((response) => {
+      this.item = response.data.data[id];
+    }).catch((error) => {
+      console.log(error);
+    })
   }
 }
 </script>

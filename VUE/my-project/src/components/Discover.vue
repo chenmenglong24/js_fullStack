@@ -2,7 +2,7 @@
   <div>
     <div class="swipe-box">
       <mt-swipe :auto="3000">
-        <mt-swipe-item v-for="(item, index) in swipeList" :key="index"><img :src="item.cover"/></mt-swipe-item>
+        <mt-swipe-item v-for="(item, index) in swipeList" :key="index" v-if="index<5" @click.native="toDetail(index)"><img :src="item.cover"/></mt-swipe-item>
         <!-- <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item>
         <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item> -->
       </mt-swipe>
@@ -16,11 +16,11 @@
     <div class="update-box">
       <div class="today-update">— 今日更新 —</div>
       <div class="update">
-        <div class="update-item">
-          <img src="@/assets/swipe.jpg"/>
-          <span>标题标题标题标题标题标题标题标题标题标题</span>
+        <div class="update-item" v-for="(item, index) in swipeList" :key="index" @click="toDetail(index)">
+          <img :src="item.cover"/>
+          <span>{{item.title}}</span>
         </div>
-        <div class="update-item">
+        <!-- <div class="update-item">
           <img src="@/assets/swipe.jpg"/>
           <span>标</span>
         </div>
@@ -55,7 +55,7 @@
         <div class="update-item">
           <img src="@/assets/swipe.jpg"/>
           <span>标题标题标题标题标题标题标题标题标题标题</span>
-        </div>
+        </div> -->
         <div class="update-item">
           <div class="update-more">更多</div>
         </div>
@@ -67,20 +67,20 @@
         <span class="more">更多</span>
       </div>
       <div class="items">
-        <router-link to='/detail' tag="div">
-          <div class="item">
-            <img src="@/assets/swipe.jpg" />
-            <span>标题标题标题标题标题标题标题标题</span>
+        <!-- <router-link to='/detail' tag="span" > -->
+          <div class="item" v-for="(item, index) in swipeList" :key="index" v-if="index<3" @click="toDetail(index)">
+            <img :src="item.cover" />
+            <span>{{item.title}}</span>
           </div>
-        </router-link>
-        <div class="item">
+        <!-- </router-link> -->
+        <!-- <div class="item">
           <img src="@/assets/swipe.jpg" />
           <span>标题</span>
         </div>
         <div class="item">
           <img src="@/assets/swipe.jpg" />
           <span>标题标题标题标题标题标题标题标题</span>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="sorts-box">
@@ -89,18 +89,18 @@
         <span class="more">更多</span>
       </div>
       <div class="items">
-        <div class="item">
-          <img src="@/assets/swipe.jpg" />
-          <span>标题标题标题标题</span>
+        <div class="item" v-for="(item, index) in swipeList" :key="index" v-if="index>swipeList.length-1-3" @click="toDetail(index)">
+          <img :src="item.cover" />
+          <span>{{item.title}}</span>
         </div>
-        <div class="item">
+        <!-- <div class="item">
           <img src="@/assets/swipe.jpg" />
           <span>标题标</span>
         </div>
         <div class="item">
           <img src="@/assets/swipe.jpg" />
           <span>标题标题标题标题</span>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -123,6 +123,14 @@ export default {
         console.log(error);
       })
     },
+    toDetail (index) {
+      this.$router.push({
+        path: '/detail',
+        query: {
+          id: index
+        }
+      })
+    }
   },
   mounted () {
     this.getDate();
@@ -218,7 +226,7 @@ export default {
   line-height: 50px;
 }
 .sorts-box{
-  margin: 20px 10px;
+  margin: 25px 10px 50px 10px;
 }
 .title-box{
   display: flex;
