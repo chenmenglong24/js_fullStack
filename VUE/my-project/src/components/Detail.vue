@@ -11,18 +11,21 @@
       <div class="desc">简介简介简介</div>
     </div>
     <div class="options">
-      <div class="option subscribe">
-        <img src="../assets/detail/unsubscribe.png"/>
+      <div class="option subscribe" :id="0" @click="choose">
+        <img src="../assets/detail/unsubscribe.png" v-if="!ischoose[0]"/>
+        <img src="../assets/detail/subscribe.png" v-if="ischoose[0]"/>
         <span class="about">订阅</span>
       </div>
       <span class="interval"></span>
-      <div class="option collection">
-        <img src="../assets/detail/uncollection.png"/>
+      <div class="option collection" :id="1" @click="choose">
+        <img src="../assets/detail/uncollection.png" v-if="!ischoose[1]"/>
+        <img src="../assets/detail/collection.png" v-if="ischoose[1]"/>
         <span class="about">收藏</span>
       </div>
       <span class="interval"></span>
-      <div class="option download">
-        <img src="../assets/detail/undownload.png"/>
+      <div class="option download" :id="2" @click="choose">
+        <img src="../assets/detail/undownload.png" v-if="!ischoose[2]"/>
+        <img src="../assets/detail/download.png" v-if="ischoose[2]"/>
         <span class="about">下载</span>
       </div>
     </div>
@@ -33,13 +36,21 @@
 export default {
   data () {
     return {
-      msg: '我是detail组件'
+      msg: '我是detail组件',
+      ischoose: [false, false, false]
     }  
   },
   methods: {
     back () {
       this.$router.go(-1);
+    },
+    choose (e) {
+      let option = e.target.id;
+      this.$set(this.ischoose, option, !this.ischoose[option]);
     }
+  },
+  mounted () {
+
   }
 }
 </script>

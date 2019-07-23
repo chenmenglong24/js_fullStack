@@ -2,9 +2,9 @@
   <div>
     <div class="swipe-box">
       <mt-swipe :auto="3000">
-        <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item>
-        <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item>
-        <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item>
+        <mt-swipe-item v-for="(item, index) in swipeList" :key="index"><img :src="item.cover"/></mt-swipe-item>
+        <!-- <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item>
+        <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item> -->
       </mt-swipe>
     </div>
     <div class="icon-box">
@@ -106,11 +106,26 @@
   </div>
 </template>
 <script>
+import Axios from 'axios';
 export default {
   data () {
     return {
-      msg: '我是Discover组件',
+      swipeList: []
     }
+  },
+  methods: {
+    getDate () {
+      var dataSource = 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example/qingtingyingyu';
+      Axios.get(dataSource).then((response) => {
+        // console.log(response);
+        this.swipeList = response.data.data;
+      }).catch((error) => {
+        console.log(error);
+      })
+    },
+  },
+  mounted () {
+    this.getDate();
   }
 }
 </script>
