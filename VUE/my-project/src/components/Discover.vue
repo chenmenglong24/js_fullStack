@@ -2,7 +2,7 @@
   <div>
     <div class="swipe-box">
       <mt-swipe :auto="3000">
-        <mt-swipe-item v-for="(item, index) in swipeList" :key="index" v-if="index<5" @click.native="toDetail(index)"><img :src="item.cover"/></mt-swipe-item>
+        <mt-swipe-item v-for="(item, index) in bookLists" :key="index" v-if="index<5" @click.native="toDetail(index)"><img :src="item.cover"/></mt-swipe-item>
         <!-- <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item>
         <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item> -->
       </mt-swipe>
@@ -16,7 +16,7 @@
     <div class="update-box">
       <div class="today-update">— 今日更新 —</div>
       <div class="update">
-        <div class="update-item" v-for="(item, index) in swipeList" :key="index" @click="toDetail(index)">
+        <div class="update-item" v-for="(item, index) in bookLists" :key="index" @click="toDetail(index)">
           <img :src="item.cover"/>
           <span>{{item.title}}</span>
         </div>
@@ -68,7 +68,7 @@
       </div>
       <div class="items">
         <!-- <router-link to='/detail' tag="span" > -->
-          <div class="item" v-for="(item, index) in swipeList" :key="index" v-if="index<3" @click="toDetail(index)">
+          <div class="item" v-for="(item, index) in bookLists" :key="index" v-if="index<3" @click="toDetail(index)">
             <img :src="item.cover" />
             <span>{{item.title}}</span>
           </div>
@@ -89,7 +89,7 @@
         <span class="more">更多</span>
       </div>
       <div class="items">
-        <div class="item" v-for="(item, index) in swipeList" :key="index" v-if="index>swipeList.length-1-3" @click="toDetail(index)">
+        <div class="item" v-for="(item, index) in bookLists" :key="index" v-if="index>bookLists.length-1-3" @click="toDetail(index)">
           <img :src="item.cover" />
           <span>{{item.title}}</span>
         </div>
@@ -110,19 +110,19 @@ import Axios from 'axios';
 export default {
   data () {
     return {
-      swipeList: []
+      bookLists: []
     }
   },
   methods: {
-    getDate () {
-      var dataSource = 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example/qingtingyingyu';
-      Axios.get(dataSource).then((response) => {
-        // console.log(response);
-        this.swipeList = response.data.data;
-      }).catch((error) => {
-        console.log(error);
-      })
-    },
+    // getDate () {
+    //   var dataSource = 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example/qingtingyingyu';
+    //   Axios.get(dataSource).then((response) => {
+    //     // console.log(response);
+    //     this.swipeList = response.data.data;
+    //   }).catch((error) => {
+    //     console.log(error);
+    //   })
+    // },
     toDetail (index) {
       this.$router.push({
         path: '/detail',
@@ -133,7 +133,10 @@ export default {
     }
   },
   mounted () {
-    this.getDate();
+    // this.getDate();
+    this.bookLists = this.$store.state.bookLists;
+    console.log(1);
+    console.log(this.bookLists);
   }
 }
 </script>

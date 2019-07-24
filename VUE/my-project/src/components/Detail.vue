@@ -60,7 +60,7 @@ export default {
   },
   mounted () {
     var id =  this.$route.query.id;
-    console.log(id);
+    // console.log(id);
     var dataSource = 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example/qingtingyingyu';
     Axios.get(dataSource).then((response) => {
       this.item = response.data.data[id];
