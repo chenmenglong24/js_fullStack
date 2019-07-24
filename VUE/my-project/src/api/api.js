@@ -19,7 +19,7 @@ function getData () {
     Axios.get(dataSource)
     .then((response) => {
         resolve(response.data.data);
-        data.push(response.data.data)
+        data.push(...response.data.data)
       }, err => {
         reject(err)
       })
@@ -28,7 +28,6 @@ function getData () {
     })
   })
 }
-
-// var data = getData();
 getData();
+// console.log(data)
 export default data;

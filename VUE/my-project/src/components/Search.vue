@@ -3,7 +3,7 @@
     <span @click="back"><mt-cell class="back" icon="back"></mt-cell></span>
     <div class="search">
       <input v-model="value" :result="filterResult" placeholder="搜索教材、课程、资料. . ." />
-      <button class="btn" :class="{ifCLick: ifClick}" ref="btn" @touchstart="handleStart" @touchend="handleEnd">搜索</button>
+      <button class="btn" :class="{ifCLick: ifClick}" ref="btn" @touchstart="handleStart" @touchend="handleEnd" @click="search">搜索</button>
     </div>
     <!-- 搜索结果 -->
     <div class="search-result" v-if="value.length">
@@ -22,12 +22,13 @@
     <div class="search-history-box" v-if="!value.length">
       <div class="title-box">
         <span class="title">搜索历史</span>
-        <span class="delete">删除记录</span>
+        <span class="delete" @click="deleteAllHistory">删除记录</span>
+        <div class="null" v-if="!searchHistory.length">暂无搜索记录</div>
         <div class="search-histories">
           <div class="search-history" v-for="(item, index) in searchHistory" :key="index">
             <img class="search-img" src="../assets/search-history.png"/>
             {{item}}
-            <img class="delete-img" src="../assets/delete-history.png"/>
+            <img class="delete-img" src="../assets/delete-history.png" @click="deleteHistory(index)"/>
           </div>
         </div>
       </div>
@@ -63,15 +64,21 @@ export default {
       hotKeys: [
         '雅思', '出国', '沪教牛津版英语', 'BBC', '演讲', '心理健康', '语法', '音乐', 'The Big Bang Theory', '教学'
       ],
-      searchHistory: [
-        '四六级', 'kobe', 'jay'
-      ]
+      // searchHistory: [
+      //   '四六级', 'kobe', 'jay'
+      // ]
     };
   },
   computed: {
     filterResult() {
       return this.defaultResult.filter(item => new RegExp(this.value, 'i').test(item));
+    },
+    searchHistory () {
+      let history = [];
+      history.push(...this.$store.state.searchHistory);
+      return history.reverse();
     }
+    
   },
   methods: {
     back () {
@@ -82,6 +89,22 @@ export default {
     },
     handleEnd () {
       this.ifClick = false;
+    },
+    search () {
+      // console.log(1);
+      if (this.value.replace(/(^\s*)|(\s*$)/g, "") =="") {
+        console.log('toast: 请输入内容')
+        } else {          
+          let searchKey = this.value
+          this.$store.dispatch('saveHistory', searchKey)
+      }
+    },
+    deleteHistory (index) {
+      console.log(1);
+      this.$store.dispatch('deleteHistory', index)
+    },
+    deleteAllHistory () {
+      this.$store.dispatch('deleteAllHistory');
     }
   }
 };
@@ -167,6 +190,15 @@ export default {
   position: absolute;
   right: 20px;
 }   
+.null{
+  margin: 15px 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #999999;
+  padding: 2px;
+  border-bottom: solid 1px #dddddd;
+}
 .search-history{
   margin: 15px 10px;
   font-size: 14px;

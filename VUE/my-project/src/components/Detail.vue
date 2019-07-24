@@ -5,10 +5,10 @@
     </div>
     <div class="details">
       <div class="details-img">
-        <img :src="info.cover"/>
+        <img :src="dataSrc.cover"/>
       </div>
-      <span class="title">{{info.title}}</span>
-      <div class="desc">{{info.desc}}</div>
+      <span class="title">{{dataSrc.title}}</span>
+      <div class="desc">{{dataSrc.desc}}</div>
     </div>
     <div class="options">
       <div class="option subscribe" :id="0" @click="subscribe">
@@ -44,9 +44,9 @@ export default {
     }  
   },
   computed: {
-    info () {
+    dataSrc () {
       var id =  this.$route.query.id;
-      return this.$store.state.bookLists[0][id];
+      return this.$store.state.bookLists[id];
     }
   },
   methods: {

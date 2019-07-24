@@ -2,7 +2,7 @@
   <div>
     <div class="swipe-box">
       <mt-swipe :auto="3000">
-        <mt-swipe-item v-for="(item, index) in info" :key="index" v-if="index<5" @click.native="toDetail(index)"><img :src="item.cover"/></mt-swipe-item>
+        <mt-swipe-item v-for="(item, index) in dataSrc" :key="index" v-if="index<5" @click.native="toDetail(index)"><img :src="item.cover"/></mt-swipe-item>
         <!-- <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item>
         <mt-swipe-item><img src="@/assets/swipe.jpg"/></mt-swipe-item> -->
       </mt-swipe>
@@ -16,7 +16,7 @@
     <div class="update-box">
       <div class="today-update">— 今日更新 —</div>
       <div class="update">
-        <div class="update-item" v-for="(item, index) in info" :key="index" @click="toDetail(index)">
+        <div class="update-item" v-for="(item, index) in dataSrc" :key="index" @click="toDetail(index)">
           <img :src="item.cover"/>
           <span>{{item.title}}</span>
         </div>
@@ -68,7 +68,7 @@
       </div>
       <div class="items">
         <!-- <router-link to='/detail' tag="span" > -->
-          <div class="item" v-for="(item, index) in info" :key="index" v-if="index<3" @click="toDetail(index)">
+          <div class="item" v-for="(item, index) in dataSrc" :key="index" v-if="index<3" @click="toDetail(index)">
             <img :src="item.cover" />
             <span>{{item.title}}</span>
           </div>
@@ -89,7 +89,7 @@
         <span class="more">更多</span>
       </div>
       <div class="items">
-        <div class="item" v-for="(item, index) in info" :key="index" v-if="index>info.length-1-3" @click="toDetail(index)">
+        <div class="item" v-for="(item, index) in dataSrc" :key="index" v-if="index>dataSrc.length-1-3" @click="toDetail(index)">
           <img :src="item.cover" />
           <span>{{item.title}}</span>
         </div>
@@ -114,8 +114,8 @@ export default {
     }
   },
   computed: {
-    info () {
-      return this.$store.state.bookLists[0];
+    dataSrc () {      
+      return this.$store.state.bookLists;
     }
   },
   methods: {
@@ -142,6 +142,7 @@ export default {
     // this.bookLists = this.$store.state.bookLists[0];
     // console.log(1);
     // console.log(this.bookLists);
+    // console.log(this.$store.state.bookLists);
   }
 }
 </script>
