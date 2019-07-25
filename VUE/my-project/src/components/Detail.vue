@@ -55,7 +55,8 @@ export default {
     },
     subscribe () {
       this.isSubscribe = !this.isSubscribe;
-      
+      let id = this.$route.query.id;
+      this.$store.dispatch('addMySubscribe', id);
     },
     collect () {
       this.isCollect = !this.isCollect;

@@ -26,7 +26,7 @@ axios.interceptors.request.use(
 )
 
 // 响应拦截
-axiox.interceptors.response.use(function (response) {
+axios.interceptors.response.use(function (response) {
   // 对响应数据进行操作
   return response
 }, function (error) {
@@ -45,7 +45,7 @@ var request = (options) => {
     }
   }
   // 表单传值参数格式化
-  return axio.request({
+  return axios.request({
     url: `http://localhost:3000${options.url}`,
     methood: options.method,
     data: options.body,
@@ -58,5 +58,37 @@ var request = (options) => {
   }).catch((error) => {
     Toast.failed('请求失败')
     throw error
+  })
+}
+ 
+// 封装http请求方式
+export const http = {}
+const methods = ['get', 'post', 'put', 'delete']
+methods.forEach(method => {
+  http[method] = (url, params = {}) => {
+    if (method === 'get') {
+      return request({ url, params, method })
+    }
+    return request({ url, body:stringify(params), method })
+  }
+})
+
+export default function plugin (Vue) {
+  if (plugin.installed) {
+    return
+  }
+  plugin.installed = true
+  Object.defineProperties(Vue.prototype, {  // defineProperties直接再一个对象上新增属性或修改原有属性，并返回最新的对象
+    $http: {
+      get () {
+        const obj = {
+          get: http['get'],
+          post: http['post'],
+          put: http['put'],
+          delete: http['delete']
+        }
+        return obj
+      }
+    }
   })
 }

@@ -7,7 +7,10 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     bookLists: data,
-    searchHistory: []
+    searchHistory: [],
+    mySubscribe: [],
+    myCollect: [],
+    myDownload: []
   },
   actions: {
     saveHistory ({ commit }, searchKey) {
@@ -18,6 +21,12 @@ export default new Vuex.Store({
     },
     deleteAllHistory ({ commit }) {
       commit('DeleteAllHistory')
+    },
+    addMySubscribe ({ commit }, id) {
+      commit('AddMySubscribe', id)
+    },
+    delMySubscribe ({ commit }, index) {
+      commit('DelMySubscribe', index)
     }
   },
   mutations: {
@@ -28,7 +37,7 @@ export default new Vuex.Store({
         state.searchHistory.splice(index, 1)
       }
       state.searchHistory.push(searchKey)
-      console.log(state.searchHistory)
+      // console.log(state.searchHistory)
     },
     DeleteHistory (state, index) {
       let len = state.searchHistory.length;
@@ -36,6 +45,21 @@ export default new Vuex.Store({
     },
     DeleteAllHistory (state) {
       state.searchHistory.splice(0);
+    },
+    AddMySubscribe (state, id) {
+      let exist = state.mySubscribe.some((item) => {
+        return id == item.id
+      })
+
+      if (exist) {
+        // console.log(state.mySubscribe);
+        return
+      } else {
+        state.mySubscribe.push(state.bookLists[id])
+      }
+    },
+    DelMySubscribe (state, index) {
+      state.mySubscribe.splice(index, 1)
     }
   }
 })
