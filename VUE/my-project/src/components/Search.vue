@@ -100,7 +100,7 @@ export default {
       }
     },
     deleteHistory (index) {
-      console.log(1);
+      // console.log(1);
       this.$store.dispatch('deleteHistory', index)
     },
     deleteAllHistory () {

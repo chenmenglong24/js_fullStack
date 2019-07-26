@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="play-box">
     <span @click="back"><mt-cell class="back" icon="back"></mt-cell></span>
     {{msg}}
     <div class="play-bar">
@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style scoped>
+/* .play-box{
+  
+} */
 .play-bar{
   width: 100%;
   height: 50px;
