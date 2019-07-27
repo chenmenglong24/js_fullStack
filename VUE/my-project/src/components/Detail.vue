@@ -12,8 +12,8 @@
     </div>
     <div class="options">
       <div class="option subscribe" :id="0" @click="subscribe">
-        <img src="../assets/detail/unsubscribe.png" v-show="!isSubscribe"/>
-        <img src="../assets/detail/subscribe.png" v-show="isSubscribe"/>
+        <img src="../assets/detail/unsubscribe.png" v-if="!dataSrc.isSubscribe"/>
+        <img src="../assets/detail/subscribe.png" v-if="dataSrc.isSubscribe"/>
         <span class="about">订阅</span>
       </div>
       <span class="interval"></span>
@@ -33,36 +33,42 @@
 </template>
 
 <script>
-import Axios from 'axios';
+// import Axios from 'axios';
+import { mapGetters } from 'vuex';
 export default {
   data () {
     return {
-      isSubscribe: false,
-      isCollect: false,
-      isDownload: false,
-      item: {}
+      // isSubscribe: false,
+      // isCollect: false,
+      // isDownload: false,
+      // item: {}
     }  
   },
   computed: {
     dataSrc () {
       var id =  this.$route.query.id;
       return this.$store.state.bookLists[id];
-    }
+    },
+    ...mapGetters([
+      'isSubscribe',
+      'isCollect',
+      'isDownload'
+    ])
   },
   methods: {
     back () {
       this.$router.go(-1);
     },
     subscribe () {
-      this.isSubscribe = !this.isSubscribe;
+      // this.isSubscribe = !this.isSubscribe;
       let id = this.$route.query.id;
       this.$store.dispatch('addMySubscribe', id);
     },
     collect () {
-      this.isCollect = !this.isCollect;
+      // this.isCollect = !this.isCollect;
     },
     download () {
-      this.isDownload = !this.isDownload;
+      // this.isDownload = !this.isDownload;
     }
   },
   mounted () {

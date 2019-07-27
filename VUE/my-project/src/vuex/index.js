@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex, { mapGetters } from 'vuex'
 import data from '@/api/api'
 
 Vue.use(Vuex)
@@ -10,7 +10,10 @@ export default new Vuex.Store({
     searchHistory: [],
     mySubscribe: [],
     myCollect: [],
-    myDownload: []
+    myDownload: [],
+    isSubscribe: false,
+    isCollect: false,
+    isDownload: false
   },
   actions: {
     saveHistory ({ commit }, searchKey) {
@@ -47,6 +50,8 @@ export default new Vuex.Store({
       state.searchHistory.splice(0);
     },
     AddMySubscribe (state, id) {
+      // state.isSubscribe = true;
+
       let exist = state.mySubscribe.some((item) => {
         return id == item.id
       })
@@ -55,11 +60,24 @@ export default new Vuex.Store({
         // console.log(state.mySubscribe);
         return
       } else {
-        state.mySubscribe.push(state.bookLists[id])
+        let item = state.bookLists[id];
+        state.mySubscribe.push(item);
+        item.isSubscribe = true;
+        console.log(item);
       }
     },
     DelMySubscribe (state, index) {
-      state.mySubscribe.splice(index, 1)
+      // state.isSubscribe = false;
+      let id = state.mySubscribe[index].id;
+      let item = state.bookLists[id];
+      item.isSubscribe = false;
+      console.log(item)
+      state.mySubscribe.splice(index, 1);
     }
+  },
+  getters: {
+    isSubscribe: state => state.isSubscribe,
+    isCollect: state => state.isCollect,
+    isDownload: state => state.isDownload
   }
 })
