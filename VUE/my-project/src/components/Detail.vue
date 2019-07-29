@@ -5,15 +5,15 @@
     </div>
     <div class="details">
       <div class="details-img">
-        <img :src="dataSrc.cover"/>
+        <img :src="currentItem.cover"/>
       </div>
-      <span class="title">{{dataSrc.title}}</span>
-      <div class="desc">{{dataSrc.desc}}</div>
+      <span class="title">{{currentItem.title}}</span>
+      <div class="desc">{{currentItem.desc}}</div>
     </div>
     <div class="options">
       <div class="option subscribe" :id="0" @click="subscribe">
-        <img src="../assets/detail/unsubscribe.png" v-if="!dataSrc.isSubscribe"/>
-        <img src="../assets/detail/subscribe.png" v-if="dataSrc.isSubscribe"/>
+        <img src="../assets/detail/unsubscribe.png" v-if="!isSubscribe"/>
+        <img src="../assets/detail/subscribe.png" v-if="isSubscribe"/>
         <span class="about">订阅</span>
       </div>
       <span class="interval"></span>
@@ -34,53 +34,41 @@
 
 <script>
 // import Axios from 'axios';
-import { mapGetters } from 'vuex';
+// import { mapGetters } from 'vuex';
 export default {
   data () {
     return {
-      // isSubscribe: false,
-      // isCollect: false,
-      // isDownload: false,
-      // item: {}
+      isSubscribe: false,
+      isCollect: false,
+      isDownload: false,
+      // currentItem: {}
     }  
   },
   computed: {
-    dataSrc () {
+    currentItem () {
       var id =  this.$route.query.id;
+      this.isSubscribe = this.$store.state.bookLists[id].isSubscribe;
       return this.$store.state.bookLists[id];
-    },
-    ...mapGetters([
-      'isSubscribe',
-      'isCollect',
-      'isDownload'
-    ])
+    }
   },
   methods: {
     back () {
       this.$router.go(-1);
     },
     subscribe () {
-      // this.isSubscribe = !this.isSubscribe;
       let id = this.$route.query.id;
       this.$store.dispatch('addMySubscribe', id);
+      this.isSubscribe = true;
     },
     collect () {
-      // this.isCollect = !this.isCollect;
+      
     },
     download () {
-      // this.isDownload = !this.isDownload;
+      
     }
   },
   mounted () {
-    // var id =  this.$route.query.id;
-    // console.log(id);
-    // var dataSource = 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example/qingtingyingyu';
-    // Axios.get(dataSource).then((response) => {
-    //   this.item = response.data.data[id];
-    // }).catch((error) => {
-    //   console.log(error);
-    // })
-    // this.item = this.$store.state.bookLists[0][id];
+
   }
 }
 </script>

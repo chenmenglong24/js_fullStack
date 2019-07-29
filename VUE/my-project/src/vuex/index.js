@@ -10,10 +10,7 @@ export default new Vuex.Store({
     searchHistory: [],
     mySubscribe: [],
     myCollect: [],
-    myDownload: [],
-    isSubscribe: false,
-    isCollect: false,
-    isDownload: false
+    myDownload: []
   },
   actions: {
     saveHistory ({ commit }, searchKey) {
@@ -67,7 +64,6 @@ export default new Vuex.Store({
       }
     },
     DelMySubscribe (state, index) {
-      // state.isSubscribe = false;
       let id = state.mySubscribe[index].id;
       let item = state.bookLists[id];
       item.isSubscribe = false;
@@ -76,8 +72,6 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    isSubscribe: state => state.isSubscribe,
-    isCollect: state => state.isCollect,
-    isDownload: state => state.isDownload
+    
   }
 })
