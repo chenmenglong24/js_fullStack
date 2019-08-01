@@ -20,22 +20,22 @@ export default new Router({
       redirect: '/discover',
       children: [
         {
-          path: '/my',
+          path: 'my',
           name: 'My',
           component: My
         },
         {
-          path: '/discover',
+          path: 'discover',
           name: 'Discover',
           component: Discover
         },
         {
-          path: '/sort',
+          path: 'sort',
           name: 'Sort',
           component: Sort
         },
         {
-          path: '/recommend',
+          path: 'recommend',
           name: 'Recommend',
           component: Recommend
         }

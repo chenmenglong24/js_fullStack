@@ -21,14 +21,12 @@
       </div>
     </div>
     <router-view/>
-    <router-link tag="span" to="/play">
-      <v-footbar></v-footbar>
-    </router-link>
+    
   </div>
 </template>
 <script>
 import Sidebar from './Sidebar'
-import Footbar from './Footbar'
+
 export default {
   data () {
     return {
@@ -39,7 +37,7 @@ export default {
   },
   components: {
     'v-sidebar': Sidebar,
-    'v-footbar': Footbar
+    
   },
   methods: {
     showside () {
