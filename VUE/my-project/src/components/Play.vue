@@ -1,20 +1,13 @@
 <template>
+  <!-- <transition name="play-page"> -->
     <div class="play-box">
-      <div class="demo">
-        <button @click="show">显示</button>
-      </div>
-  <transition name="play-page">
-    <div v-show="see">
-
-      <!-- <span @click="back"><mt-cell class="back" icon="back"></mt-cell></span>
+      <span @click="back"><mt-cell class="back" icon="back"></mt-cell></span>
       {{msg}}
       <div class="play-bar">
       播放页面的footbar
-      </div> -->
-      <div class="red"></div>
+      </div>
     </div>
-  </transition>
-    </div>
+  <!-- </transition> -->
 </template>
 
 <script>
@@ -37,11 +30,8 @@ export default {
 </script>
 
 <style scoped>
-/* .play-box{
+.play-box{
   
-} */
-.demo{
-  height: 100px;
 }
 .play-bar{
   width: 100%;
