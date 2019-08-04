@@ -2,11 +2,10 @@
   <div class="play-bar">
     <div class="img-box">
       <img class="current-img" src="../assets/swipe.jpg"/>
+      <img ref="btn" class="switch" src="../assets/pause.png" @click="playPause" @click.stop=""/>
     </div>
     <audio id="audio" 
       src="https://audio.beingfine.cn/ListenData/267103271/609904395.mp3" 
-      autoplay="" 
-      preload="" 
       >
     </audio>
   </div>
@@ -17,6 +16,19 @@ export default {
   data () {
     return {
       msg: '我是底部播放栏吖'
+    }
+  },
+  methods: {
+    playPause () {
+      var audio = document.getElementById('audio');
+      var btn = this.$refs.btn;
+      if (audio.paused) {
+        audio.play();
+        btn.src = "/static/play.png";
+      } else {
+        audio.pause();
+        btn.src = "/static/pause.png";
+      }
     }
   }
 }
@@ -37,11 +49,20 @@ export default {
   margin: 6px 15px;
   width: 37px;
   height: 37px;
+  position: relative;
 }
 .current-img{
   width: 37px;
   height: 37px;
   border-radius: 50%;
+}
+.switch{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
 
