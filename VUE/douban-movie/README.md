@@ -1,4 +1,4 @@
-# douban
+# douban-movie
 
 > A Vue.js project
 

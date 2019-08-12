@@ -28,32 +28,32 @@ export default {
   },
   mounted () {
     setTimeout(() => {
-      this.initScroll()  
-    }, 20);
+      this.initScroll()
+    },20)
   },
   methods: {
-    initScroll () {
+    initScroll() {
       if (!this.$refs.wrapper) {
         return
       }
       this.scroll = new BScroll(this.$refs.wrapper, {
-        click: true, 
-        bounce: false, 
+        click: true,
+        bounce: false,
         pullUpLoad: this.pullUpLoad
       })
       if (this.pullUpLoad) {
         this.initPullUpLoad()
       }
     },
-    initPullUpLoad () {
+    initPullUpLoad() {
       this.scroll.on('pullingUp', () => {
-        this.$emit('pulling-Up')
+        this.$emit('pulling-up')
       })
     },
-    refresh () {
+    refresh() {
       this.scroll && this.scroll.refresh()
     },
-    forceUpdate () {
+    forceUpdate() {
       if (this.pullUpLoad) {
         this.scroll.finishPullUp()
         this.refresh()
@@ -63,7 +63,8 @@ export default {
 }
 </script>
 
-<style lang=stylus scoped>
-/* .scroll-wrapper */
-
+<style lang="stylus" scoped>
+.scroll-wrapper
+  height 100%
+  overflow hidden
 </style>
