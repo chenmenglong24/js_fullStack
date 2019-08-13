@@ -5,7 +5,7 @@
       <i class="iconfont icon-right"></i>
     </div>
     <div v-if="movies.length" class="list">
-      <div class="item" v-for="item in movies" :key="item.id" @click="$emit('select', item.id)">
+      <div class="item" v-for="item in movies" :key="item.id" @click="$emit('select', item._id)">
         <div class="image">
           <img v-lazy="item.poster" alt="" width="100%" height="100%"/>
           <em v-if="item.isPlay === 1" class="rate">

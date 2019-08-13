@@ -4,7 +4,7 @@ import Cookie from 'js-cookie'
 
 const instance = axios.create({
   timeout: 60000,
-  baseURL: 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example'
+  // baseURL: 'https://www.easy-mock.com/mock/5ca45824c4e9a575b66b62c9/example'
 })
 const COOKIE_NAME = 'movie_trailer_user'
 
