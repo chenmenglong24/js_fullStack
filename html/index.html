@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .header{
+      height: 100px;
+      background-color: aqua;
+    }
+    .body{
+      position: relative;
+      overflow: hidden;
+      overflow-y: auto;
+      height: calc(100% - 100px);
+    }
+    .body::-webkit-scrollbar{
+      width: 0;
+      height: 20px;
+      border-radius: 5px;
+      background: red;
+    }
+    .content1{
+      height: 500px;
+      background-color: chartreuse;
+    }
+    .content2{
+      height: 500px;
+      background-color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+  <div class="header"></div>
+  <div class="body">
+    <div class="content1"></div>
+    <div class="content2"></div>
+  </div>
+</body>
+</html>
